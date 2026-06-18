@@ -1,6 +1,6 @@
 #include "virtualhorizon.h"
 
-VirtualHorizon::VirtualHorizon(int height, int width, QWidget *parent) : QWidget(parent)
+VirtualHorizon::VirtualHorizon(int height, int width, QWidget *parent) : QWidget(parent), _rotX(0), _rotY(0)
 {
     this->setMinimumSize(width/5,height/5);
     _baseHeight=height;
@@ -30,8 +30,8 @@ void VirtualHorizon::paintEvent(QPaintEvent *event)
     // skyGradient.setColorAt(0.0, QColor(0x1A5B8C));
     // skyGradient.setColorAt(1.0, QColor(0x66C2FF));
     // painter.fillRect(QRectF(-size, -size, size * 2, size), skyGradient);
-    painter.fillRect(QRectF(-size, -size, size * 2, size), QColor(0x3EB4E4));
-    painter.fillRect(QRectF(-size, 0, size * 2, size), QColor(0x704B00));
+    painter.fillRect(QRectF(-size, -size, size * 2, size), _topColor);
+    painter.fillRect(QRectF(-size, 0, size * 2, size), _bottomColor);
 
     painter.setPen(QPen(Qt::white, R * 0.02));
     painter.drawLine(QPointF(-size, 0), QPointF(size, 0));
@@ -67,5 +67,20 @@ void VirtualHorizon::setData(float rotX, float rotY)
 QSize VirtualHorizon::sizeHint() const
 {
     return QSize(_baseWidth, _baseHeight);
+}
+
+void VirtualHorizon::changeTheme()
+{
+    if(ToolBar::getTheme())
+    {
+        _topColor = QColor(0x3EB4E4);
+        _bottomColor = QColor(0x704B00);
+    }
+    else
+    {
+        _topColor = QColor(0x54BEEB);
+        _bottomColor = QColor(0x8A5D0D);
+    }
+    this->update();
 }
 

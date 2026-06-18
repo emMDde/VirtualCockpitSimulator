@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QWidget>
 #include <QPainter>
+#include "toolbar.h"
 
 /**
  * @class VirtualHorizon
@@ -34,6 +35,8 @@ public slots:
      */
     void setData(float rotX, float rotY);
 
+    void changeTheme();
+
 signals:
 
 protected:
@@ -52,6 +55,9 @@ private:
     float _rotY; /**< Przechowuje aktualny kąt pochylenia. */
     int _baseWidth;
     int _baseHeight;
+
+    QColor _topColor;
+    QColor _bottomColor;
 };
 
 #endif // VIRTUALHORIZON_H

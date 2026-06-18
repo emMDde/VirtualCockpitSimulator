@@ -19,7 +19,13 @@ signals:
 public:
     explicit DataPage(int windowHeight, int windowWidth, QWidget *parent = nullptr);
 
-signals:
+public slots:
+    void changeTheme();
+
+private:
+    BottomBar *_bottomPanel;
+    FlightDataArea *_dataArea;
+
 };
 
 #endif // DATAPAGE_H

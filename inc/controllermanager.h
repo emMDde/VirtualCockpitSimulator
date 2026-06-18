@@ -30,6 +30,8 @@ private:
     QTimer* _reconnectTimer;
     QTimer* _watchDataTimer;
 
+    float _testStep;
+
     QByteArray _buffer;
     QString _portName;
     const int PACKET_SIZE = 18;

@@ -79,7 +79,28 @@ void FlightDataArea::resizeEvent(QResizeEvent *event)
 
 void FlightDataArea::changeTheme()
 {
+    _horizon->changeTheme();
+    if (ToolBar::getTheme())
+    {
+        _bgColor        = QColor(0x99CDEB);
+        _lineColor      = QColor(0x777777);
+        _groundColor    = QColor(0x555555);
+        _panelColor     = QColor(0xEAEAEA);
+        _graphBgColor   = Qt::black;
+        _graphTextColor = Qt::white;
 
+    }
+    else
+    {
+        _bgColor        = QColor(0xBBE4FF);
+        _lineColor      = QColor(0xA8A8A8);
+        _groundColor    = QColor(0x8CA3B0);
+        _panelColor     = Qt::white;
+        _graphBgColor   = QColor(0xC4CACC);
+        _graphTextColor = Qt::black;
+
+    }
+    this->update();
 }
 
 void FlightDataArea::setData(float rotX, float rotY)
@@ -130,22 +151,11 @@ void FlightDataArea::paintEvent(QPaintEvent *event)
 
     int w = width();
     int h = height();
-    painter.fillRect(0, 0, w, h, QColor(0x99CDEB));
+    painter.fillRect(0, 0, w, h, _bgColor);
 
-    auto drawCloud = [&](int x, int y, int cW, int cH) {
-        painter.setBrush(Qt::white);
-        painter.setPen(Qt::NoPen);
-        double cornerRadius = cH * 0.4;
-        painter.drawRoundedRect(x, y + cH * 0.4, cW, cH * 0.6, cornerRadius, cornerRadius);
-
-        painter.drawEllipse(x + cW * 0.08, y + cH * 0.2, cW * 0.4, cH * 0.7);
-        painter.drawEllipse(x + cW * 0.28, y, cW * 0.48, cH * 0.9);
-        painter.drawEllipse(x + cW * 0.60, y + cH * 0.25, cW * 0.35, cH * 0.6);
-    };
-
-    drawCloud(w * 0.03, h * 0.15, w * 0.12, h * 0.10);
-    drawCloud(w * 0.25, h * 0.05, w * 0.15, h * 0.12);
-    drawCloud(w * 0.80, h * 0.04, w * 0.18, h * 0.14);
+    drawCloud(painter, w * 0.03, h * 0.15, w * 0.12, h * 0.10);
+    drawCloud(painter, w * 0.25, h * 0.05, w * 0.15, h * 0.12);
+    drawCloud(painter, w * 0.80, h * 0.04, w * 0.18, h * 0.14);
 
     int bottomY = h * 0.83;
     double peakY = h * 0.68;
@@ -157,7 +167,7 @@ void FlightDataArea::paintEvent(QPaintEvent *event)
     groundShape.lineTo(0, h);
     groundShape.closeSubpath();
 
-    painter.setBrush(QColor(0x555555));
+    painter.setBrush(_groundColor);
     painter.setPen(Qt::NoPen);
     painter.drawPath(groundShape);
 
@@ -166,7 +176,7 @@ void FlightDataArea::paintEvent(QPaintEvent *event)
     ridgeLine.quadTo(w / 2.0, peakY, w, bottomY);
 
     painter.setBrush(Qt::NoBrush);
-    painter.setPen(QPen(QColor(0x777777), h*0.03, Qt::SolidLine, Qt::RoundCap));
+    painter.setPen(QPen(_lineColor, h*0.03, Qt::SolidLine, Qt::RoundCap));
     painter.drawPath(ridgeLine);
 
     QRect horizon = _horizon->geometry();
@@ -174,57 +184,69 @@ void FlightDataArea::paintEvent(QPaintEvent *event)
     painter.drawRect(horizon);
 
     QRect panelRect = _layoutContainer->geometry();
-    painter.fillRect(panelRect, QColor(0xEAEAEA));
+    painter.fillRect(panelRect, _panelColor);
     painter.setPen(QPen(QColor(0x404040), h*0.008));
     painter.drawRect(panelRect);
 
     QRect rollRect = _xGraphSpace->geometry().translated(panelRect.topLeft());
     QRect pitchRect = _yGraphSpace->geometry().translated(panelRect.topLeft());
 
-    painter.fillRect(rollRect, Qt::black);
-    painter.fillRect(pitchRect, Qt::black);
+    painter.fillRect(rollRect, _graphBgColor);
+    painter.fillRect(pitchRect, _graphBgColor);
 
+    drawGraph(painter, rollRect, _rollHistory, QColor(0x3A9BDC), 180.0f, "+180", "-180");
+    drawGraph(painter, pitchRect, _pitchHistory, QColor(0xD94040), 90.0f, "+90", "-90");
+}
+
+void FlightDataArea::drawCloud(QPainter &painter, int x, int y, int cW, int cH)
+{
+    painter.setBrush(Qt::white);
+    painter.setPen(Qt::NoPen);
+    double cornerRadius = cH * 0.4;
+    painter.drawRoundedRect(x, y + cH * 0.4, cW, cH * 0.6, cornerRadius, cornerRadius);
+
+    painter.drawEllipse(x + cW * 0.08, y + cH * 0.2, cW * 0.4, cH * 0.7);
+    painter.drawEllipse(x + cW * 0.28, y, cW * 0.48, cH * 0.9);
+    painter.drawEllipse(x + cW * 0.60, y + cH * 0.25, cW * 0.35, cH * 0.6);
+};
+
+void FlightDataArea::drawGraph(QPainter &painter, const QRect& rect, const QList<float>& data, QColor color, float maxVal, const QString& topTxt, const QString& botTxt)
+{
     int padL = 40;
     int padB = 20;
     int padT = 10;
 
-    auto drawGraph = [&](const QRect& rect, const QList<float>& data, QColor color, float maxVal, const QString& topTxt, const QString& botTxt) {
+    int plotX = rect.x() + padL;
+    int plotY = rect.y() + padT;
+    int plotW = rect.width() - padL - 10;
+    int plotH = rect.height() - padT - padB;
+    int zeroY = plotY + (plotH / 2);
 
-        int plotX = rect.x() + padL;
-        int plotY = rect.y() + padT;
-        int plotW = rect.width() - padL - 10;
-        int plotH = rect.height() - padT - padB;
-        int zeroY = plotY + (plotH / 2);
+    painter.setPen(QPen(Qt::white, 2));
+    painter.drawLine(plotX, plotY, plotX, plotY + plotH); // Oś Y
+    painter.drawLine(plotX, plotY + plotH, plotX + plotW, plotY + plotH); // Oś X
 
-        painter.setPen(QPen(Qt::white, 2));
-        painter.drawLine(plotX, plotY, plotX, plotY + plotH); // Oś Y
-        painter.drawLine(plotX, plotY + plotH, plotX + plotW, plotY + plotH); // Oś X
+    painter.setPen(QPen(Qt::gray, 1, Qt::DashLine));
+    painter.drawLine(plotX, zeroY, plotX + plotW, zeroY);
 
-        painter.setPen(QPen(Qt::gray, 1, Qt::DashLine));
-        painter.drawLine(plotX, zeroY, plotX + plotW, zeroY);
+    painter.setPen(_graphTextColor);
+    painter.setFont(QFont("Arial", 8, QFont::Bold));
+    painter.drawText(rect.x(), plotY, padL - 5, 20, Qt::AlignRight | Qt::AlignTop, topTxt);
+    painter.drawText(rect.x(), zeroY - 10, padL - 5, 20, Qt::AlignRight | Qt::AlignVCenter, "0");
+    painter.drawText(rect.x(), plotY + plotH - 20, padL - 5, 20, Qt::AlignRight | Qt::AlignBottom, botTxt);
 
-        painter.setPen(Qt::white);
-        painter.setFont(QFont("Arial", 8, QFont::Bold));
-        painter.drawText(rect.x(), plotY, padL - 5, 20, Qt::AlignRight | Qt::AlignTop, topTxt);
-        painter.drawText(rect.x(), zeroY - 10, padL - 5, 20, Qt::AlignRight | Qt::AlignVCenter, "0");
-        painter.drawText(rect.x(), plotY + plotH - 20, padL - 5, 20, Qt::AlignRight | Qt::AlignBottom, botTxt);
+    if (data.size() > 1) {
+        painter.setPen(QPen(color, 3));
+        float stepX = (float)plotW / (_maxDataPoints - 1);
 
-        if (data.size() > 1) {
-            painter.setPen(QPen(color, 3));
-            float stepX = (float)plotW / (_maxDataPoints - 1);
+        for (int i = 0; i < data.size() - 1; ++i) {
+            float y1 = zeroY - (data[i] * (plotH / (maxVal * 2.0)));
+            float y2 = zeroY - (data[i+1] * (plotH / (maxVal * 2.0)));
 
-            for (int i = 0; i < data.size() - 1; ++i) {
-                float y1 = zeroY - (data[i] * (plotH / (maxVal * 2.0)));
-                float y2 = zeroY - (data[i+1] * (plotH / (maxVal * 2.0)));
+            float x1 = plotX + (i * stepX);
+            float x2 = plotX + ((i + 1) * stepX);
 
-                float x1 = plotX + (i * stepX);
-                float x2 = plotX + ((i + 1) * stepX);
-
-                painter.drawLine(x1, y1, x2, y2);
-            }
+            painter.drawLine(x1, y1, x2, y2);
         }
-    };
-
-    drawGraph(rollRect, _rollHistory, QColor(0x3A9BDC), 180.0f, "+180", "-180");
-    drawGraph(pitchRect, _pitchHistory, QColor(0xD94040), 90.0f, "+90", "-90");
+    }
 }

@@ -40,6 +40,8 @@ public slots:
      */
     void setConnectionStatus(bool connected);
 
+    void changeTheme();
+
 signals:
     /**
      * @brief Sygnał emitowany po kliknięciu przycisku "MOTYW".
@@ -70,7 +72,7 @@ protected:
 
 private slots:
 
-    static void changeTheme();
+    static void setTheme();
 
 private:
 

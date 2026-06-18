@@ -37,6 +37,9 @@ void MainWindow::createLayout()
     connect(_controller, &ControllerManager::dataReceived, mainPage, &MainPage::updateSimData);
     connect(_controller, &ControllerManager::connectionStatus, dataPage, &DataPage::connectionStatus);
     connect(_controller, &ControllerManager::dataReceived, dataPage, &DataPage::updateSimData);
+    connect(mainPage, &MainPage::changeThemeRequested, dataPage, &DataPage::changeTheme);
+    connect(dataPage, &DataPage::changeThemeRequested, mainPage, &MainPage::changeTheme);
+
 
     connect(mainPage, &MainPage::changePageRequested, this, [=]() {
         stackedWidget->setCurrentIndex(1);

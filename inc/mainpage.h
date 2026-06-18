@@ -22,7 +22,14 @@ protected:
 public:
     explicit MainPage(int windowHeight, int windowWidth, QWidget *parent = nullptr);
 
+public slots:
+    void changeTheme();
+
+
 private:
+    TopBar *_topPanel;
+    SimulatorArea *_gameArea;
+
     VirtualHorizon *_horizon;
     float _barHeight;
 };

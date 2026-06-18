@@ -6,13 +6,13 @@ bool ToolBar::THEME = true;
 ToolBar::ToolBar(QWidget *parent, int height, int width, const char* pageText, ButtonTheme theme) : QFrame(parent)
 {
     this->setFixedHeight(height);
-    this->setStyleSheet("TopBar { background-color: #17181F; }");
+    this->changeTheme();
 
     _btnPage = new AnimatedButton(height/2, height*2, theme, tr(pageText), this);
     connect(_btnPage, &AnimatedButton::clicked, this, &ToolBar::pageButtonClicked);
     _btnTheme = new AnimatedButton(height/2, height*2, theme, tr("MOTYW"), this);
+    connect(_btnTheme, &AnimatedButton::clicked, this, &ToolBar::setTheme);
     connect(_btnTheme, &AnimatedButton::clicked, this, &ToolBar::themeButtonClicked);
-    connect(_btnTheme, &AnimatedButton::clicked, this, changeTheme);
     _btnLanguage = new AnimatedButton(height/2, height*2, theme, tr("JĘZYK"), false, this);
     _btnLanguage->setMenu(createLangMenu());
 
@@ -80,6 +80,12 @@ void ToolBar::changeEvent(QEvent *event)
 }
 
 void ToolBar::changeTheme()
+{
+    QString color = ToolBar::THEME ? "#17181F" : "#272A36";
+    this->setStyleSheet(QString("ToolBar { background-color: %1; }").arg(color));
+}
+
+void ToolBar::setTheme()
 {
     ToolBar::THEME=!ToolBar::THEME;
 }

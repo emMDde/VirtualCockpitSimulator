@@ -12,6 +12,7 @@
 #include <QPainterPath>
 #include <QGraphicsEffect>
 #include "virtualhorizon.h"
+#include "toolbar.h"
 
 class FlightDataArea : public QFrame
 {
@@ -63,10 +64,23 @@ private:
     QPushButton* _pauseBtn;
     QPushButton* _clearBtn;
 
+    QColor _bgColor;
+    QColor _lineColor;
+    QColor _groundColor;
+    QColor _panelColor;
+    QColor _textColor;
+    QColor _graphBgColor;
+    QColor _graphTextColor;
+
+
     /**
      * @brief Odświeża tytuł okna przy użyciu aktualnego translatora.
      */
     void reTranslate();
+
+    void drawCloud(QPainter &painter, int x, int y, int cW, int cH);
+
+    void drawGraph(QPainter &painter, const QRect& rect, const QList<float>& data, QColor color, float maxVal, const QString& topTxt, const QString& botTxt);
 };
 
 #endif // FLIGHTDATAAREA_H
