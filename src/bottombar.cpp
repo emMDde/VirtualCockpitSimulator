@@ -1,7 +1,6 @@
 #include "bottombar.h"
-#include <qtranslator.h>
 
-BottomBar::BottomBar(QWidget *parent, int height, int width) : ToolBar(parent, height, width, grey)
+BottomBar::BottomBar(QWidget *parent, int height, int width) : ToolBar(parent, height, width, "LOT", grey)
 {
     QHBoxLayout *topLayout = new QHBoxLayout(this);
     topLayout->setContentsMargins(height/4, height/4, height/4, height/4);

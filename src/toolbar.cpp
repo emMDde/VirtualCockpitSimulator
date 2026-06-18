@@ -1,17 +1,18 @@
 #include "toolbar.h"
-#include <qtranslator.h>
 
 QString ToolBar::LANGUAGE = "";
+bool ToolBar::THEME = true;
 
-ToolBar::ToolBar(QWidget *parent, int height, int width, ButtonTheme theme) : QFrame(parent)
+ToolBar::ToolBar(QWidget *parent, int height, int width, const char* pageText, ButtonTheme theme) : QFrame(parent)
 {
     this->setFixedHeight(height);
     this->setStyleSheet("TopBar { background-color: #17181F; }");
 
-    _btnPage = new AnimatedButton(height/2, height*2, theme, tr("DANE"), this);
+    _btnPage = new AnimatedButton(height/2, height*2, theme, tr(pageText), this);
     connect(_btnPage, &AnimatedButton::clicked, this, &ToolBar::pageButtonClicked);
     _btnTheme = new AnimatedButton(height/2, height*2, theme, tr("MOTYW"), this);
     connect(_btnTheme, &AnimatedButton::clicked, this, &ToolBar::themeButtonClicked);
+    connect(_btnTheme, &AnimatedButton::clicked, this, changeTheme);
     _btnLanguage = new AnimatedButton(height/2, height*2, theme, tr("JĘZYK"), false, this);
     _btnLanguage->setMenu(createLangMenu());
 
@@ -76,6 +77,16 @@ void ToolBar::changeEvent(QEvent *event)
         }
     }
     QFrame::changeEvent(event);
+}
+
+void ToolBar::changeTheme()
+{
+    ToolBar::THEME=!ToolBar::THEME;
+}
+
+const bool ToolBar::getTheme()
+{
+    return ToolBar::THEME;
 }
 
 

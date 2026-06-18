@@ -1,7 +1,6 @@
 #include "topbar.h"
-#include <qtranslator.h>
 
-TopBar::TopBar(QWidget *parent, int height, int width) : ToolBar(parent, height, width, orange)
+TopBar::TopBar(QWidget *parent, int height, int width) : ToolBar(parent, height, width, "DANE", orange)
 {
     QHBoxLayout *topLayout = new QHBoxLayout(this);
     topLayout->setContentsMargins(height/4, height/4, height/4, height/4);

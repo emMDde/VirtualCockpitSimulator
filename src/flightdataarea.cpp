@@ -29,23 +29,23 @@ FlightDataArea::FlightDataArea(int height, int width, QWidget *parent) : QFrame(
     _clearBtn = new QPushButton(tr("WYCZYŚĆ"), _layoutContainer);
     QString btnStyle =
         "QPushButton { "
-        "   background-color: #555555; " /* Wyraźnie jaśniejsza baza */
+        "   background-color: #555555; "
         "   color: #FFFFFF; "
         "   border: 2px solid #3A3A3A; "
         "   border-radius: 4px; "
-        "   padding: 8px; "              /* Równe marginesy w spoczynku */
+        "   padding: 8px; "
         "   font-weight: bold; "
         "   font-size: 14px; "
         "}"
         "QPushButton:hover { "
-        "   background-color: #6A6A6A; " /* Jeszcze jaśniejsze przy najechaniu */
-        "   border: 2px solid #3A9BDC; " /* Rozjaśniony niebieski akcent */
+        "   background-color: #6A6A6A; "
+        "   border: 2px solid #3A9BDC; "
         "}"
         "QPushButton:pressed { "
-        "   background-color: #404040; " /* Lekkie przyciemnienie imitujące cień */
-        "   border: 3px solid #D94040; " /* Mocniejszy, jaskrawy czerwony akcent */
+        "   background-color: #404040; "
+        "   border: 3px solid #D94040; "
         "   color: #E0E0E0; "
-        "   padding: 10px 8px 6px 8px; " /* Przesunięcie tekstu o 2px w dół (góra 10, dół 6) */
+        "   padding: 10px 8px 6px 8px; "
         "}";
     _pauseBtn->setStyleSheet(btnStyle);
     _clearBtn->setStyleSheet(btnStyle);
@@ -184,8 +184,8 @@ void FlightDataArea::paintEvent(QPaintEvent *event)
     painter.fillRect(rollRect, Qt::black);
     painter.fillRect(pitchRect, Qt::black);
 
-    int padL = 40; // Miejsce na tekst po lewej
-    int padB = 20; // Miejsce na dolną ramkę
+    int padL = 40;
+    int padB = 20;
     int padT = 10;
 
     auto drawGraph = [&](const QRect& rect, const QList<float>& data, QColor color, float maxVal, const QString& topTxt, const QString& botTxt) {
@@ -196,24 +196,19 @@ void FlightDataArea::paintEvent(QPaintEvent *event)
         int plotH = rect.height() - padT - padB;
         int zeroY = plotY + (plotH / 2);
 
-        // --- Rysowanie Osi (Białe ramy) ---
         painter.setPen(QPen(Qt::white, 2));
         painter.drawLine(plotX, plotY, plotX, plotY + plotH); // Oś Y
         painter.drawLine(plotX, plotY + plotH, plotX + plotW, plotY + plotH); // Oś X
 
-        // Linia zera (szara przerywana)
         painter.setPen(QPen(Qt::gray, 1, Qt::DashLine));
         painter.drawLine(plotX, zeroY, plotX + plotW, zeroY);
 
-
-        // --- Teksty osi Y (Wartości) ---
         painter.setPen(Qt::white);
         painter.setFont(QFont("Arial", 8, QFont::Bold));
         painter.drawText(rect.x(), plotY, padL - 5, 20, Qt::AlignRight | Qt::AlignTop, topTxt);
         painter.drawText(rect.x(), zeroY - 10, padL - 5, 20, Qt::AlignRight | Qt::AlignVCenter, "0");
         painter.drawText(rect.x(), plotY + plotH - 20, padL - 5, 20, Qt::AlignRight | Qt::AlignBottom, botTxt);
 
-        // --- Rysowanie wykresu danych ---
         if (data.size() > 1) {
             painter.setPen(QPen(color, 3));
             float stepX = (float)plotW / (_maxDataPoints - 1);
@@ -230,7 +225,6 @@ void FlightDataArea::paintEvent(QPaintEvent *event)
         }
     };
 
-    // Rysujemy gotowe wykresy w odpowiednich oknach pobranych z Layoutu
     drawGraph(rollRect, _rollHistory, QColor(0x3A9BDC), 180.0f, "+180", "-180");
     drawGraph(pitchRect, _pitchHistory, QColor(0xD94040), 90.0f, "+90", "-90");
 }

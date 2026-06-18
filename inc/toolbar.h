@@ -14,6 +14,7 @@
 #include <QFrame>
 #include <QPropertyAnimation>
 #include <QActionGroup>
+#include <qtranslator.h>
 #include "animatedbutton.h"
 
 class ToolBar : public QFrame
@@ -28,7 +29,8 @@ public:
      * @param height Wysokość paska w pikselach.
      * @param width Szerokość paska w pikselach.
      */
-    explicit ToolBar(QWidget *parent = nullptr, int height = 60, int width = 1280, ButtonTheme theme=orange);
+    explicit ToolBar(QWidget *parent = nullptr, int height = 60, int width = 1280,  const char* pageText = nullptr, ButtonTheme theme=orange);
+    static const bool getTheme();
 
 public slots:
     /**
@@ -66,7 +68,14 @@ protected:
     QLabel *_statusLed; /**< Zmienna przechowująca diodę wskazującą status połączenia z kontrolerem. */
     int _ledRadius;     /**< Promień diody wskazującej status połączenia. */
 
+private slots:
+
+    static void changeTheme();
+
 private:
+
+    static bool THEME;
+
     /**
      * @brief Funkcja tworzy i konfiguruje menu wyboru języka aplikacji.
      * * Funkcja inicjalizuje obiekty QAction dla dostępnych języków (Polski, English, Deutsch),
