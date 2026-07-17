@@ -1,0 +1,5 @@
+<map id="ControllerManager::generateTestData" name="ControllerManager::generateTestData">
+<area shape="rect" id="Node000001" title="Slot generujący sztuczne, płynnie zmieniające się dane telemetryczne. Używany jako fallback w trybie ..." alt="" coords="5,5,141,48"/>
+<area shape="rect" id="Node000002" href="$class_controller_manager.html#adb204731f6048da2aeb57e75d73401f6" title="Sygnał emitowany po odebraniu, sparsowaniu i pomyślnej weryfikacji sumy CRC pakietu danych." alt="" coords="189,5,324,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,24,176,26,171,27,141,29"/>
+</map>

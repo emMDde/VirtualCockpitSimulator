@@ -1,0 +1,8 @@
+<map id="ControllerManager::handleError" name="ControllerManager::handleError">
+<area shape="rect" id="Node000001" title="Slot reagujący na błędy sprzętowe i systemowe portu szeregowego. Wywoływany m.in. w momencie nagłego ..." alt="" coords="372,5,507,48"/>
+<area shape="rect" id="Node000002" href="$class_controller_manager.html#a131aeb2cb17417d2af5af7045a632197" title="Konstruktor klasy ControllerManager." alt="" coords="5,5,141,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="354,24,324,25,189,25,141,27,140,21,189,20,324,20,359,23"/>
+<area shape="rect" id="Node000003" href="$class_controller_manager.html#a1105a5177d1228d636b1018e2cb3baff" title="Slot pełniący funkcję programowego watchdoga. Reaguje w sytuacji, gdy port jest otwarty,..." alt="" coords="189,35,324,77"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="359,40,325,48,324,43,354,40"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="170,43,141,40,141,35,176,42"/>
+</map>

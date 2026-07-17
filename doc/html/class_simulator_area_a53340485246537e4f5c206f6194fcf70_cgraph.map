@@ -1,0 +1,7 @@
+<map id="SimulatorArea::paintEvent" name="SimulatorArea::paintEvent">
+<area shape="rect" id="Node000001" title="Główna metoda rysująca cały kadr symulacji (tło, chmury, samolot i śmigło)." alt="" coords="5,31,179,57"/>
+<area shape="rect" id="Node000002" href="$class_simulator_area.html#ad3fe0c118b969dfa4630b301a3e20453" title="Rysuje statyczne i dynamiczne elementy tła, takie jak gradientowe niebo i ziemię." alt="" coords="227,5,435,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,32,214,31,209,32,180,37"/>
+<area shape="rect" id="Node000003" href="$class_simulator_area.html#a73c68827148e7fecc906586b95945777" title="Metoda pomocnicza generująca i rysująca chmurę o zadanych wymiarach w określonym miejscu." alt="" coords="244,56,418,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="179,51,231,58,226,59,179,56"/>
+</map>

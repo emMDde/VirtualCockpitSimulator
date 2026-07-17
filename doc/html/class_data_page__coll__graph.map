@@ -1,0 +1,21 @@
+<map id="DataPage" name="DataPage">
+<area shape="rect" id="Node000001" title="Klasa reprezentująca dedykowany widok/stronę z prezentującą dane lotu." alt="" coords="70,420,149,447"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,81,78,108"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="34,125,29,168,25,225,28,287,35,318,45,347,71,387,99,419,94,420,67,391,40,349,30,319,23,288,19,225,24,167,35,120"/>
+<area shape="rect" id="Node000009" href="$class_virtual_horizon.html" title="Widget wizualizujący sztuczny horyzont (wskaźnik położenia)." alt="" coords="36,223,140,249"/>
+<area shape="poly" id="edge10_Node000009_Node000002" title=" " alt="" coords="51,120,87,222,81,223,50,125"/>
+<area shape="rect" id="Node000003" href="$class_bottom_bar.html" title="Dolny pasek nawigacyjny aplikacji, dla zakładki wizualizacji danych." alt="" coords="197,321,280,348"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="222,358,183,398,141,422,139,417,180,394,217,361"/>
+<area shape="rect" id="Node000004" href="$class_tool_bar.html" title="Pasek narzędziowy / panel nawigacyjny aplikacji." alt="" coords="216,223,281,249"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="247,263,242,322,238,320,244,267"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="143,81,212,108"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="191,120,199,131,244,222,239,222,194,133,191,125"/>
+<area shape="rect" id="Node000008" href="$class_flight_data_area.html" title="Obszar interfejsu odpowiedzialny za wizualizację parametrów lotu." alt="" coords="55,321,164,348"/>
+<area shape="poly" id="edge8_Node000008_Node000005" title=" " alt="" coords="182,121,187,160,187,205,179,253,161,299,150,312,136,323,133,319,146,309,157,296,174,252,181,205,182,160,181,126"/>
+<area shape="rect" id="Node000006" href="$class_animated_button.html" title="Przycisk z customowym stylem i opcjonalną animacją kółka." alt="" coords="236,81,351,108"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="287,120,255,223,250,221,283,125"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="244,5,343,32"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="294,45,296,82,291,80,293,50"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="112,362,112,421,107,419,107,365"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="95,262,109,321,104,321,93,267"/>
+</map>

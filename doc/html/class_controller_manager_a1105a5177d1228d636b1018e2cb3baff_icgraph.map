@@ -1,0 +1,5 @@
+<map id="ControllerManager::noRecentData" name="ControllerManager::noRecentData">
+<area shape="rect" id="Node000001" title="Slot pełniący funkcję programowego watchdoga. Reaguje w sytuacji, gdy port jest otwarty,..." alt="" coords="189,5,324,48"/>
+<area shape="rect" id="Node000002" href="$class_controller_manager.html#a131aeb2cb17417d2af5af7045a632197" title="Konstruktor klasy ControllerManager." alt="" coords="5,5,141,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,27,141,29,141,24,176,26"/>
+</map>

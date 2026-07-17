@@ -1,0 +1,5 @@
+<map id="SimulatorArea::changeTheme" name="SimulatorArea::changeTheme">
+<area shape="rect" id="Node000001" title="Slot aktualizujący paletę kolorów nieba, ziemi oraz elementów otoczenia zgodnie z wybranym motywem." alt="" coords="5,5,199,32"/>
+<area shape="rect" id="Node000002" href="$class_tool_bar.html#a96829f8817c5d57662c576d22c4d170c" title="Zwraca aktualny, globalny stan motywu graficznego." alt="" coords="247,5,378,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,16,234,19,229,19,199,21"/>
+</map>

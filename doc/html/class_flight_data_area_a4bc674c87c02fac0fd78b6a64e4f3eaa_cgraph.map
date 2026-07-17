@@ -1,0 +1,5 @@
+<map id="FlightDataArea::changeTheme" name="FlightDataArea::changeTheme">
+<area shape="rect" id="Node000001" title="Slot aktualizujący kolory i motyw wizualny całego obszaru oraz jego podelementów." alt="" coords="5,5,204,32"/>
+<area shape="rect" id="Node000002" href="$class_tool_bar.html#a96829f8817c5d57662c576d22c4d170c" title="Zwraca aktualny, globalny stan motywu graficznego." alt="" coords="252,5,383,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,16,239,19,234,19,204,21"/>
+</map>

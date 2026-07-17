@@ -1,0 +1,5 @@
+<map id="FlightDataArea::drawCloud" name="FlightDataArea::drawCloud">
+<area shape="rect" id="Node000001" title="Metoda pomocnicza rysująca pojedynczą chmurę dekoracyjną w tle paneli." alt="" coords="232,5,410,32"/>
+<area shape="rect" id="Node000002" href="$class_flight_data_area.html#a0106d9711aa4139970b71d2391570a7e" title="Główna metoda rysująca tło, chmury oraz obsługująca niestandardowe rysowanie wykresów." alt="" coords="5,5,184,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="213,19,184,21,184,16,218,19"/>
+</map>

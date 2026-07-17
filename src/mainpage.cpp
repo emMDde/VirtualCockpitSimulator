@@ -15,23 +15,36 @@ MainPage::MainPage(int windowHeight, int windowWidth, QWidget *parent) : QWidget
     mainLayout->addWidget(_topPanel);
     mainLayout->addWidget(_gameArea);
 
+    _entryOverlay = new EntryOverlay(this);
+    _entryOverlay->show();
+
     connect(_topPanel, &TopBar::pageButtonClicked, this, &MainPage::changePageRequested);
     connect(_topPanel, &TopBar::themeButtonClicked, this, &MainPage::changeThemeRequested);
+    connect(this, &MainPage::connectionStatus, _entryOverlay, &EntryOverlay::handleConnection);
     connect(this, &MainPage::connectionStatus, _topPanel, &TopBar::setConnectionStatus);
     connect(this, &MainPage::updateSimData, _gameArea, &SimulatorArea::setData);
-    connect(this, &Mainpage::connectionStatus, _gameArea, &SimulatorArea::handleConnectionStatus);
     connect(this, &MainPage::updateSimData, _horizon, &VirtualHorizon::setData);
     connect(this, &MainPage::changeThemeRequested, this, &MainPage::changeTheme);
+
+    connect(_entryOverlay, &EntryOverlay::simulationStatus, this, &MainPage::simulationStatus);
+    connect(_entryOverlay, &EntryOverlay::simulationStatus, _gameArea, &SimulatorArea::simulationStatus);
+    connect(_entryOverlay, &EntryOverlay::simulationStatus, this, [this](bool status){
+        if(status) _entryOverlay->hide();
+        else  _entryOverlay->show(); });
     this->changeTheme();
 }
 
 void MainPage::resizeEvent(QResizeEvent *event)
 {
+    QWidget::resizeEvent(event);
+
     int w = width();
     int h = height();
     _horizon->setGeometry(w * 0.7, _barHeight + h * 0.17, w / 5, h * 0.5);
 
-    QWidget::resizeEvent(event);
+    _entryOverlay->setGeometry(_gameArea->geometry());
+    _entryOverlay->raise();
+
 }
 
 void MainPage::changeTheme()

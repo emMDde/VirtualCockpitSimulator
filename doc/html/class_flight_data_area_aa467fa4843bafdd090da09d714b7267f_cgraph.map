@@ -1,0 +1,5 @@
+<map id="FlightDataArea::changeEvent" name="FlightDataArea::changeEvent">
+<area shape="rect" id="Node000001" title="Reaguje na zmiany systemowe, nadpisano funkcjonalność zmiany języka aplikacji." alt="" coords="5,5,198,32"/>
+<area shape="rect" id="Node000002" href="$class_flight_data_area.html#a767c574172923087ea3a8a23a0e13a2c" title="Odświeża tytuł okna oraz opisy przycisków przy użyciu aktualnego translatora." alt="" coords="246,5,427,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,16,233,19,227,19,198,21"/>
+</map>

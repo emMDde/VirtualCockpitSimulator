@@ -12,21 +12,24 @@ ControllerManager::ControllerManager(QObject *parent) : QObject(parent), _serial
     connect(_watchDataTimer, &QTimer::timeout, this, &ControllerManager::noRecentData);
     connect(_serial, &QSerialPort::errorOccurred, this, &ControllerManager::handleError);
     connect(_reconnectTimer, &QTimer::timeout, this, &ControllerManager::tryReconnect);
+
 }
 
 void ControllerManager::start()
 {
+    emit connectionStatus(false);
     if(!searchForController()) _reconnectTimer->start(1000);
-    //_testTimer = new QTimer(this);
-    //connect(_testTimer, &QTimer::timeout, this, &ControllerManager::generateTestData);
-    //_testTimer->start(20);
+    // emit connectionStatus(true);
+    // _testTimer = new QTimer(this);
+    // connect(_testTimer, &QTimer::timeout, this, &ControllerManager::generateTestData);
+    // _testTimer->start(20);
 }
 
 void ControllerManager::generateTestData()
 {
     _testStep += 0.01f;
 
-    float rotX = 150.0f * std::sin(_testStep);
+    float rotX = 45.0f * std::sin(_testStep);
     float rotY = 45.0f  * std::sin(_testStep * 0.5f);
 
     emit dataReceived(rotX, rotY);
@@ -107,10 +110,10 @@ void ControllerManager::readData()
         std::memcpy(&rotY, _buffer.constData() + 12, sizeof(float));
         std::memcpy(&crc, _buffer.constData() + 16, sizeof(crc));
         //qDebug() << "Otrzymano dane:" << rotX << rotY;
+        _watchDataTimer->start(300);
         if(checkCRC(_buffer, crc))
         {
             emit dataReceived(rotX, rotY);
-            _watchDataTimer->start(300);
             _buffer.remove(0, PACKET_SIZE);
         }
         else _buffer.remove(0, HEADER_SIZE);
@@ -126,7 +129,7 @@ void ControllerManager::handleError(QSerialPort::SerialPortError error)
         _buffer.clear();
 
         emit connectionStatus(false);
-
+        qDebug() << "Błąd portu szeregowego!" ;
         if(!_reconnectTimer->isActive()) _reconnectTimer->start(1000);
     }
 }

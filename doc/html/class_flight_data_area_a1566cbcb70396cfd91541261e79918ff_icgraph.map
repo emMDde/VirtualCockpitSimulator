@@ -1,0 +1,7 @@
+<map id="FlightDataArea::updateSimData" name="FlightDataArea::updateSimData">
+<area shape="rect" id="Node000001" title="Sygnał przekazujący dalej aktualne parametry symulacji." alt="" coords="257,31,463,57"/>
+<area shape="rect" id="Node000002" href="$class_data_page.html#ac2913c8a3b05bd338f8bba2cecb10292" title="Konstruktor klasy DataPage." alt="" coords="34,5,180,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="238,33,180,29,180,23,244,32"/>
+<area shape="rect" id="Node000003" href="$class_flight_data_area.html#a8498ba19dc17433647728dac687190b8" title="Konstruktor klasy FlightDataArea." alt="" coords="5,56,209,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="238,56,209,62,209,56,244,56"/>
+</map>

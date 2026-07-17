@@ -19,6 +19,7 @@ DataPage::DataPage(int windowHeight, int windowWidth, QWidget *parent) : QWidget
     connect(this, &DataPage::updateSimData, _dataArea, &FlightDataArea::updateSimData);
     connect(this, &DataPage::changeThemeRequested, this, &DataPage::changeTheme);
     //connect(this, &DataPage::updateSimData, horizon, &VirtualHorizon::setData);
+    //connect(this, &DataPage::startSimulation, _dataArea, &FlightDataArea::startSimulation);
     this->changeTheme();
 }
 

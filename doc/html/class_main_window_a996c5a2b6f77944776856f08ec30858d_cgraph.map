@@ -1,0 +1,38 @@
+<map id="MainWindow::MainWindow" name="MainWindow::MainWindow">
+<area shape="rect" id="Node000001" title="Konstruktor klasy MainWindow. Pobiera geometrię ekranu, konfiguruje początkowy rozmiar okna,..." alt="" coords="5,485,185,512"/>
+<area shape="rect" id="Node000002" href="$class_main_window.html#a1f9461bcb5778d6f3e578d2f7f5e91f8" title="Funkcja deklarująca główne składowe okna głównego Odpowiada ułożenie elementów, utworzenie górnego i ..." alt="" coords="246,376,425,403"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,483,291,407,289,412,128,487"/>
+<area shape="rect" id="Node000017" href="$class_controller_manager.html#adb204731f6048da2aeb57e75d73401f6" title="Sygnał emitowany po odebraniu, sparsowaniu i pomyślnej weryfikacji sumy CRC pakietu danych." alt="" coords="268,477,403,520"/>
+<area shape="poly" id="edge16_Node000001_Node000017" title=" " alt="" coords="184,496,254,497,250,500,186,501"/>
+<area shape="rect" id="Node000018" href="$class_flight_math_model.html#a3d0e2250a253686cd9c8f02746eba93b" title="Odbiera surowe dane wychylenia drążka i przelicza je na siły/prędkości działające na model." alt="" coords="233,645,438,672"/>
+<area shape="poly" id="edge17_Node000001_Node000018" title=" " alt="" coords="118,510,304,635,299,638,116,515"/>
+<area shape="rect" id="Node000003" href="$class_data_page.html#a8168dabe33858fd2b874253fbc76ca48" title="Sygnał zgłaszający żądanie przełączenia bieżącej strony widoku." alt="" coords="491,5,713,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="336,374,346,314,371,223,390,174,415,125,446,81,484,42,493,38,489,42,488,46,450,84,420,128,395,176,376,225,351,315,341,377"/>
+<area shape="rect" id="Node000004" href="$class_main_page.html#a68949cb094bf5c7ffb93825df933ce2a" title="Sygnał zgłaszający żądanie przełączenia bieżącej strony (np. przejście do strony z danymi)." alt="" coords="491,56,713,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="337,374,350,322,377,245,397,203,421,162,450,125,484,93,494,89,490,93,488,97,454,128,425,165,401,206,382,247,355,323,342,377"/>
+<area shape="rect" id="Node000005" href="$class_data_page.html#a6df6cdc27dd92024a165fe5905378409" title="Slot odpowiedzialny za odświeżenie i zmianę motywu graficznego wewnętznych paneli." alt="" coords="518,107,687,133"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="338,374,355,330,384,266,427,200,454,169,484,143,505,134,501,137,488,148,458,173,431,203,389,269,360,332,343,377"/>
+<area shape="rect" id="Node000006" href="$class_main_page.html#a74614f7f4842e723a90e5a0f83113ea5" title="Slot odpowiedzialny za rozesłanie żądania zmiany motywu graficznego do wszystkich widgetów potomnych." alt="" coords="518,157,687,184"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="341,374,360,337,391,288,433,237,458,214,485,194,505,186,501,189,487,198,461,218,437,241,396,291,365,340,345,377"/>
+<area shape="rect" id="Node000007" href="$class_data_page.html#af09e61e28bc26ed71d268c917fa375a9" title="Sygnał zgłaszający żądanie globalnej zmiany motywu kolorystycznego aplikacji." alt="" coords="486,208,718,235"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="345,374,399,311,439,275,485,244,502,239,497,242,487,249,443,279,403,315,349,377"/>
+<area shape="rect" id="Node000008" href="$class_main_page.html#ae47eede4be46802b5630f952a5406ebb" title="Sygnał zgłaszający żądanie globalnej zmiany motywu kolorystycznego wewnątrz strony." alt="" coords="486,259,718,285"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="353,374,410,334,446,313,485,295,509,289,504,291,487,300,449,318,413,339,356,378"/>
+<area shape="rect" id="Node000009" href="$class_controller_manager.html#aa42d7cddc514e9b9450fd19d7ae3ce06" title="Sygnał informujący o zmianie statusu połączenia z fizycznym kontrolerem." alt="" coords="534,309,670,352"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="399,373,522,347,517,350,401,378"/>
+<area shape="rect" id="Node000010" href="$class_data_page.html#a4e24c6a91e00e263eb031ee96079e747" title="Sygnał przekazujący dalej informację o stanie połączenia z kontrolerem." alt="" coords="508,376,696,403"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="425,387,495,388,490,390,426,392"/>
+<area shape="rect" id="Node000011" href="$class_main_page.html#a7b1e42a30c752cbaab2aaaf098974691" title="Sygnał przekazujący informację o aktualnym stanie połączenia z kontrolerem." alt="" coords="508,427,696,453"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="409,401,516,422,511,424,410,406"/>
+<area shape="rect" id="Node000012" href="$class_flight_math_model.html#a22d5170576e49717f9e751f789ec1450" title="Aktywuje lub wstrzymuje wewnętrzne timery i obliczenia modelu matematycznego." alt="" coords="510,477,694,520"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="360,400,418,431,487,463,507,472,501,472,485,468,416,436,360,406"/>
+<area shape="rect" id="Node000013" href="$class_main_page.html#ac0af4faef29562f96c76e07b707bd211" title="Sygnał przekazujący rozkaz uruchomienia, wznowienia lub zatrzymania symulacji." alt="" coords="510,544,694,571"/>
+<area shape="poly" id="edge12_Node000002_Node000013" title=" " alt="" coords="359,401,399,428,440,464,454,483,463,500,471,515,488,530,499,538,493,538,484,534,467,518,458,502,450,485,436,467,396,432,359,406"/>
+<area shape="rect" id="Node000014" href="$class_data_page.html#ab5c16a54d2de4028e9ecba1518363f81" title="Sygnał przekazujący obliczone dane symulacji do składowych komponentów." alt="" coords="514,595,691,621"/>
+<area shape="poly" id="edge13_Node000002_Node000014" title=" " alt="" coords="362,400,403,427,440,464,451,481,457,497,461,527,468,554,475,567,488,581,502,592,497,591,484,585,471,571,463,556,456,528,451,498,446,483,436,467,399,431,362,406"/>
+<area shape="rect" id="Node000015" href="$class_flight_math_model.html#aa0b7660b31249497ffc64a1e94f936b5" title="Emituje przeliczone, wygładzone i ograniczone fizycznie kąty położenia samolotu." alt="" coords="494,696,710,723"/>
+<area shape="poly" id="edge14_Node000002_Node000015" title=" " alt="" coords="365,400,405,426,424,444,440,464,455,495,461,525,458,580,457,606,459,631,468,657,488,682,491,687,486,686,484,686,464,659,454,632,451,606,453,580,456,525,450,497,436,467,420,447,402,431,365,406"/>
+<area shape="rect" id="Node000016" href="$class_main_page.html#ad469b9ee0058e5f593df1a8126651e69" title="Sygnał przekazujący zaktualizowane dane telemetryczne do poszczególnych widgetów." alt="" coords="514,645,691,672"/>
+<area shape="poly" id="edge15_Node000002_Node000016" title=" " alt="" coords="364,400,404,427,424,444,440,464,453,488,459,511,460,553,463,593,472,612,488,631,502,644,497,643,484,635,467,615,458,594,455,554,453,511,448,490,436,467,420,448,401,431,364,406"/>
+<area shape="poly" id="edge18_Node000018_Node000015" title=" " alt="" coords="410,670,516,693,511,693,409,675"/>
+</map>

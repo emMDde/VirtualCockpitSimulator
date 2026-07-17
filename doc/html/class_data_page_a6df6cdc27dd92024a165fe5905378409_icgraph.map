@@ -1,0 +1,9 @@
+<map id="DataPage::changeTheme" name="DataPage::changeTheme">
+<area shape="rect" id="Node000001" title="Slot odpowiedzialny za odświeżenie i zmianę motywu graficznego wewnętznych paneli." alt="" coords="460,31,629,57"/>
+<area shape="rect" id="Node000002" href="$class_main_window.html#a1f9461bcb5778d6f3e578d2f7f5e91f8" title="Funkcja deklarująca główne składowe okna głównego Odpowiada ułożenie elementów, utworzenie górnego i ..." alt="" coords="233,5,412,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="442,33,413,32,413,26,447,33"/>
+<area shape="rect" id="Node000004" href="$class_data_page.html#ac2913c8a3b05bd338f8bba2cecb10292" title="Konstruktor klasy DataPage." alt="" coords="250,56,395,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="447,55,396,64,395,58,442,56"/>
+<area shape="rect" id="Node000003" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="Konstruktor klasy MainWindow. Pobiera geometrię ekranu, konfiguruje początkowy rozmiar okna,..." alt="" coords="5,5,185,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="215,19,186,21,185,16,220,18"/>
+</map>

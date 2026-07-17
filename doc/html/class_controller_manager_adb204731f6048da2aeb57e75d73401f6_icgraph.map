@@ -1,0 +1,23 @@
+<map id="ControllerManager::dataReceived" name="ControllerManager::dataReceived">
+<area shape="rect" id="Node000001" title="Sygnał emitowany po odebraniu, sparsowaniu i pomyślnej weryfikacji sumy CRC pakietu danych." alt="" coords="783,64,918,107"/>
+<area shape="rect" id="Node000002" href="$class_controller_manager.html#ad61f0915f0161c60ed78cebe23059c0b" title="Slot generujący sztuczne, płynnie zmieniające się dane telemetryczne. Używany jako fallback w trybie ..." alt="" coords="577,5,713,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="765,62,713,49,713,43,770,62"/>
+<area shape="rect" id="Node000003" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="Konstruktor klasy MainWindow. Pobiera geometrię ekranu, konfiguruje początkowy rozmiar okna,..." alt="" coords="555,72,735,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="764,86,736,88,735,83,770,85"/>
+<area shape="rect" id="Node000004" href="$class_controller_manager.html#a0dfa8127a78b4728001aba1f0f6d476c" title="Slot obsługujący zdarzenie gotowości danych w porcie szeregowym (readyRead). Pobiera bajty do wewnętr..." alt="" coords="577,123,713,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="770,108,714,127,713,122,765,109"/>
+<area shape="rect" id="Node000005" href="$class_controller_manager.html#ad33d47f11294baa22cf4a54ae4331ebc" title="Slot reagujący na błędy sprzętowe i systemowe portu szeregowego. Wywoływany m.in. w momencie nagłego ..." alt="" coords="372,89,507,132"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="559,131,508,124,508,119,565,130"/>
+<area shape="rect" id="Node000008" href="$class_controller_manager.html#a3259e7f30e3ccf6994107842e252f7ca" title="Iteruje po wszystkich dostępnych portach szeregowych w celu identyfikacji i otwarcia portu kontrolera..." alt="" coords="372,156,507,199"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="559,158,508,169,507,164,565,157"/>
+<area shape="rect" id="Node000006" href="$class_controller_manager.html#a131aeb2cb17417d2af5af7045a632197" title="Konstruktor klasy ControllerManager." alt="" coords="5,89,141,132"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="358,85,324,80,256,74,189,80,139,91,137,86,188,75,256,68,324,75,363,84"/>
+<area shape="rect" id="Node000007" href="$class_controller_manager.html#a1105a5177d1228d636b1018e2cb3baff" title="Slot pełniący funkcję programowego watchdoga. Reaguje w sytuacji, gdy port jest otwarty,..." alt="" coords="189,89,324,132"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="354,111,325,113,324,108,359,110"/>
+<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="171,112,142,113,140,108,175,109"/>
+<area shape="rect" id="Node000009" href="$class_controller_manager.html#a1632a6401ae283521f837985bf893903" title="Inicjuje menedżer i uruchamia procedurę wyszukiwania oraz połączenia z kontrolerem." alt="" coords="189,156,324,199"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="354,178,324,180,324,175,359,177"/>
+<area shape="rect" id="Node000010" href="$class_controller_manager.html#a9e557b5b14d42d16d2f159ab1e8026b5" title="Slot wywoływany cyklicznie przez timer rekon koneksji. Podejmuje próby ponownego odnalezienia i otwar..." alt="" coords="189,223,324,265"/>
+<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="367,204,318,225,316,220,362,205"/>
+<area shape="poly" id="edge11_Node000010_Node000006" title=" " alt="" coords="192,214,187,213,136,173,95,135,96,130,139,169,190,208,198,215"/>
+</map>

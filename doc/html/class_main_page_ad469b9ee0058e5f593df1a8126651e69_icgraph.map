@@ -1,0 +1,9 @@
+<map id="MainPage::updateSimData" name="MainPage::updateSimData">
+<area shape="rect" id="Node000001" title="Sygnał przekazujący zaktualizowane dane telemetryczne do poszczególnych widgetów." alt="" coords="460,31,637,57"/>
+<area shape="rect" id="Node000002" href="$class_main_window.html#a1f9461bcb5778d6f3e578d2f7f5e91f8" title="Funkcja deklarująca główne składowe okna głównego Odpowiada ułożenie elementów, utworzenie górnego i ..." alt="" coords="233,5,412,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="442,32,413,31,413,26,447,32"/>
+<area shape="rect" id="Node000004" href="$class_main_page.html#a80f43b72185f7ca021d81c2c6e9173a8" title="Konstruktor klasy MainPage. Inicjalizuje wszystkie widgety potomne, ustala ich układ (Layout) i łączy..." alt="" coords="250,56,395,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="447,55,396,64,395,59,442,56"/>
+<area shape="rect" id="Node000003" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="Konstruktor klasy MainWindow. Pobiera geometrię ekranu, konfiguruje początkowy rozmiar okna,..." alt="" coords="5,5,185,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="215,19,186,21,185,16,220,18"/>
+</map>

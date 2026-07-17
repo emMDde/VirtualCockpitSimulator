@@ -1,0 +1,15 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,81,74,108"/>
+<area shape="rect" id="Node000001" href="$class_entry_overlay.html" title="Klasa reprezentująca nakładkę startową oraz ekran utraty połączenia z kontrolerem." alt="" coords="127,5,224,32"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="72,71,120,42,146,31,142,34,123,46,76,75"/>
+<area shape="rect" id="Node000002" href="$class_flight_data_area.html" title="Obszar interfejsu odpowiedzialny za wizualizację parametrów lotu." alt="" coords="122,56,230,83"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="88,83,123,78,119,81,90,88"/>
+<area shape="rect" id="Node000003" href="$class_simulator_area.html" title="Obszar graficzny odpowiedzialny za renderowanie wizualizacji lotu samolotu." alt="" coords="124,107,228,133"/>
+<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="89,101,126,109,122,112,90,106"/>
+<area shape="rect" id="Node000004" href="$class_tool_bar.html" title="Pasek narzędziowy / panel nawigacyjny aplikacji." alt="" coords="143,157,208,184"/>
+<area shape="poly" id="edge4_Node000000_Node000004" title=" " alt="" coords="74,114,123,143,147,157,141,157,120,148,73,119"/>
+<area shape="rect" id="Node000005" href="$class_bottom_bar.html" title="Dolny pasek nawigacyjny aplikacji, dla zakładki wizualizacji danych." alt="" coords="278,132,361,159"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="223,160,280,152,275,153,224,165"/>
+<area shape="rect" id="Node000006" href="$class_top_bar.html" title="Górny pasek nawigacyjny aplikacji." alt="" coords="288,183,351,209"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="224,176,291,190,286,191,223,182"/>
+</map>

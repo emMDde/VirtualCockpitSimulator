@@ -1,0 +1,10 @@
+<map id="FlightMathModel::updateSimData" name="FlightMathModel::updateSimData">
+<area shape="rect" id="Node000001" title="Emituje przeliczone, wygładzone i ograniczone fizycznie kąty położenia samolotu." alt="" coords="486,31,701,57"/>
+<area shape="rect" id="Node000002" href="$class_main_window.html#a1f9461bcb5778d6f3e578d2f7f5e91f8" title="Funkcja deklarująca główne składowe okna głównego Odpowiada ułożenie elementów, utworzenie górnego i ..." alt="" coords="246,5,425,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="468,32,425,30,425,25,473,32"/>
+<area shape="rect" id="Node000004" href="$class_flight_math_model.html#a3d0e2250a253686cd9c8f02746eba93b" title="Odbiera surowe dane wychylenia drążka i przelicza je na siły/prędkości działające na model." alt="" coords="233,56,438,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="473,56,438,62,438,57,468,56"/>
+<area shape="rect" id="Node000003" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="Konstruktor klasy MainWindow. Pobiera geometrię ekranu, konfiguruje początkowy rozmiar okna,..." alt="" coords="5,31,185,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="228,30,185,37,185,32,233,29"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="214,57,185,56,185,51,220,57"/>
+</map>

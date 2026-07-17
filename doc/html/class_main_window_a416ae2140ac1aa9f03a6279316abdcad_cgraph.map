@@ -1,0 +1,5 @@
+<map id="MainWindow::changeEvent" name="MainWindow::changeEvent">
+<area shape="rect" id="Node000001" title="Reaguje na globalne zmiany systemowe przesyłane do okna. Nadpisuje domyślne zachowanie w celu przechw..." alt="" coords="5,5,186,32"/>
+<area shape="rect" id="Node000002" href="$class_main_window.html#a5e5425a6dcd29806ea8af30cc889cd73" title="Odświeża tytuł okna przy użyciu aktualnego translatora." alt="" coords="234,5,403,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,16,221,19,215,19,186,21"/>
+</map>

@@ -1,0 +1,25 @@
+<map id="MainPage" name="MainPage">
+<area shape="rect" id="Node000001" title="Główny widok aplikacji integrujący trójwymiarową symulację lotu z interfejsem użytkownika." alt="" coords="160,423,240,449"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,223,78,249"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="33,262,30,307,32,329,39,349,62,379,93,401,128,416,163,428,157,428,126,421,91,405,58,383,34,352,26,330,24,306,33,267"/>
+<area shape="rect" id="Node000010" href="$class_virtual_horizon.html" title="Widget wizualizujący sztuczny horyzont (wskaźnik położenia)." alt="" coords="48,324,152,351"/>
+<area shape="poly" id="edge13_Node000010_Node000002" title=" " alt="" coords="57,260,96,323,90,325,56,265"/>
+<area shape="rect" id="Node000003" href="$class_top_bar.html" title="Górny pasek nawigacyjny aplikacji." alt="" coords="436,324,498,351"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="434,358,342,401,290,417,241,429,240,424,288,412,341,396,428,359"/>
+<area shape="rect" id="Node000004" href="$class_tool_bar.html" title="Pasek narzędziowy / panel nawigacyjny aplikacji." alt="" coords="414,223,480,249"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="454,262,467,325,462,323,451,267"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="243,81,312,108"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="290,120,314,168,331,197,366,212,416,227,411,228,364,217,328,201,310,170,289,125"/>
+<area shape="rect" id="Node000008" href="$class_simulator_area.html" title="Obszar graficzny odpowiedzialny za renderowanie wizualizacji lotu samolotu." alt="" coords="158,273,261,300"/>
+<area shape="poly" id="edge8_Node000008_Node000005" title=" " alt="" coords="270,121,216,274,212,272,266,125"/>
+<area shape="rect" id="Node000009" href="$class_entry_overlay.html" title="Klasa reprezentująca nakładkę startową oraz ekran utraty połączenia z kontrolerem." alt="" coords="274,223,372,249"/>
+<area shape="poly" id="edge10_Node000009_Node000005" title=" " alt="" coords="280,121,287,159,299,198,314,223,309,222,294,200,282,161,278,126"/>
+<area shape="rect" id="Node000006" href="$class_animated_button.html" title="Przycisk z customowym stylem i opcjonalną animacją kółka." alt="" coords="363,81,477,108"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="427,121,447,223,442,221,424,126"/>
+<area shape="poly" id="edge11_Node000009_Node000006" title=" " alt="" coords="376,118,363,134,348,156,338,181,327,224,322,221,333,179,343,154,358,130,380,114"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="370,5,470,32"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="421,45,423,82,418,80,419,49"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="210,314,203,423,198,421,205,317"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="320,263,309,307,289,352,255,394,219,424,216,420,251,390,285,349,304,306,316,267"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="107,363,116,382,126,397,143,410,163,422,157,422,140,414,123,400,111,384,105,368"/>
+</map>

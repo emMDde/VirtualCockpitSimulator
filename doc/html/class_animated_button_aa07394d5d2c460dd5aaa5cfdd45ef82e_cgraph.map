@@ -1,0 +1,7 @@
+<map id="AnimatedButton::AnimatedButton" name="AnimatedButton::AnimatedButton">
+<area shape="rect" id="Node000001" title="Konstruktor klasy AnimatedButton." alt="" coords="5,23,183,65"/>
+<area shape="rect" id="Node000002" href="$class_animated_button.html#a4d803741f1e7b295385021233480ea8a" title="Inicjalizuje obiekt kółka oraz konfiguruje parametry animacji." alt="" coords="231,5,443,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,32,218,31,212,32,183,37"/>
+<area shape="rect" id="Node000003" href="$class_animated_button.html#ab758fedbc30b080fab5071b8be9f0d95" title="Konfiguruje paletę kolorów na podstawie wybranego motywu." alt="" coords="241,56,433,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="183,51,228,58,222,58,183,56"/>
+</map>

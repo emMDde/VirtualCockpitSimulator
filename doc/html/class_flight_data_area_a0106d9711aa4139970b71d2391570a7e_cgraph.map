@@ -1,0 +1,7 @@
+<map id="FlightDataArea::paintEvent" name="FlightDataArea::paintEvent">
+<area shape="rect" id="Node000001" title="Główna metoda rysująca tło, chmury oraz obsługująca niestandardowe rysowanie wykresów." alt="" coords="5,31,184,57"/>
+<area shape="rect" id="Node000002" href="$class_flight_data_area.html#a54acf28dddda008205b4f97888cefbef" title="Metoda pomocnicza rysująca pojedynczą chmurę dekoracyjną w tle paneli." alt="" coords="232,5,410,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,31,219,30,214,31,184,37"/>
+<area shape="rect" id="Node000003" href="$class_flight_data_area.html#ae62c1eebd5bcb705151f578cf47a35c1" title="Wykreśla linie telemetrii wraz z osiami, opisanymi krańcami i siatką w podanym obszarze." alt="" coords="232,56,411,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="184,51,219,57,213,58,184,57"/>
+</map>

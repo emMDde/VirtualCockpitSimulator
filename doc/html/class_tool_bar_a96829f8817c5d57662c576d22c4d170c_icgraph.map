@@ -1,0 +1,9 @@
+<map id="ToolBar::getTheme" name="ToolBar::getTheme">
+<area shape="rect" id="Node000001" title="Zwraca aktualny, globalny stan motywu graficznego." alt="" coords="252,56,383,83"/>
+<area shape="rect" id="Node000002" href="$class_flight_data_area.html#a4bc674c87c02fac0fd78b6a64e4f3eaa" title="Slot aktualizujący kolory i motyw wizualny całego obszaru oraz jego podelementów." alt="" coords="5,5,204,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="241,53,164,35,164,30,246,51"/>
+<area shape="rect" id="Node000003" href="$class_simulator_area.html#a6b789bbed5e9495fd50e5b75cdcdfe0b" title="Slot aktualizujący paletę kolorów nieba, ziemi oraz elementów otoczenia zgodnie z wybranym motywem." alt="" coords="8,56,201,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="234,70,202,72,201,67,239,69"/>
+<area shape="rect" id="Node000004" href="$class_virtual_horizon.html#a9e3292d6984611dcf664115f93befa0f" title="Slot aktualizujący kolory nieba, ziemi oraz linii podziałki przyrządu po zmianie motywu graficznego." alt="" coords="8,107,201,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="246,86,164,109,163,103,240,87"/>
+</map>

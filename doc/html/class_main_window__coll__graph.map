@@ -1,0 +1,12 @@
+<map id="MainWindow" name="MainWindow">
+<area shape="rect" id="Node000001" title="Główne okno aplikacji zarządzające cyklem życia programu i globalną architekturą widoków." alt="" coords="152,180,248,207"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,81,112,108"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,115,184,178,179,181,89,120"/>
+<area shape="rect" id="Node000003" href="$class_controller_manager.html" title="Zarządza komunikacją z zewnętrznym kontrolerem poprzez port szeregowy (UART)." alt="" coords="136,81,264,108"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="202,122,202,181,197,179,198,126"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="237,5,306,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="252,41,214,83,210,79,247,44"/>
+<area shape="rect" id="Node000005" href="$class_flight_math_model.html" title="Model matematyczno&#45;fizyczny zachowania samolotu w przestrzeni." alt="" coords="288,81,405,108"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="296,41,337,81,331,81,295,46"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="324,118,275,158,230,182,228,177,272,154,319,120"/>
+</map>

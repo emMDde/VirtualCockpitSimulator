@@ -1,0 +1,11 @@
+<map id="ControllerManager::handleError" name="ControllerManager::handleError">
+<area shape="rect" id="Node000001" title="Slot reagujący na błędy sprzętowe i systemowe portu szeregowego. Wywoływany m.in. w momencie nagłego ..." alt="" coords="5,39,141,81"/>
+<area shape="rect" id="Node000002" href="$class_controller_manager.html#aa42d7cddc514e9b9450fd19d7ae3ce06" title="Sygnał informujący o zmianie statusu połączenia z fizycznym kontrolerem." alt="" coords="189,5,324,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,45,176,40,171,43,142,50"/>
+<area shape="rect" id="Node000003" href="$class_controller_manager.html#a0dfa8127a78b4728001aba1f0f6d476c" title="Slot obsługujący zdarzenie gotowości danych w porcie szeregowym (readyRead). Pobiera bajty do wewnętr..." alt="" coords="189,72,324,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="141,70,176,78,171,79,141,75"/>
+<area shape="rect" id="Node000004" href="$class_controller_manager.html#a51a67f7b7ff8caca331e9d4d55bcb2b7" title="Weryfikuje integralność danych poprzez porównanie obliczonej sumy kontrolnej z wartością zapisaną w p..." alt="" coords="372,39,507,81"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="324,78,360,74,354,76,325,84"/>
+<area shape="rect" id="Node000005" href="$class_controller_manager.html#adb204731f6048da2aeb57e75d73401f6" title="Sygnał emitowany po odebraniu, sparsowaniu i pomyślnej weryfikacji sumy CRC pakietu danych." alt="" coords="372,105,507,148"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="325,103,360,112,354,112,324,108"/>
+</map>

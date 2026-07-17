@@ -32,5 +32,12 @@
     <message>
         <source>DANE LOTU</source> <translation>FLIGHT DATA</translation>
     </message>
+    <name>EntryOverlay</name>
+    <message>
+        <source>Połączono</source> <translation>Connected</translation>
+    </message>
+    <message>
+        <source>Łączenie z kontrolerem</source> <translation>Connecting with controller</translation>
+    </message>
 </context>
 </TS>

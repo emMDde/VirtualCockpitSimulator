@@ -1,0 +1,15 @@
+<map id="BottomBar::BottomBar" name="BottomBar::BottomBar">
+<area shape="rect" id="Node000001" title="Konstruktor klasy BottomBar. Przekazuje parametry konfiguracyjne bezpośrednio do konstruktora klasy b..." alt="" coords="5,107,159,133"/>
+<area shape="rect" id="Node000002" href="$class_tool_bar.html#a58cb1edcf5789fd598e3c762c8df5af8" title="Konstruktor klasy ToolBar. Inicjalizuje układ paska, tworzy przyciski nawigacyjne,..." alt="" coords="207,107,324,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,117,194,119,189,121,160,123"/>
+<area shape="rect" id="Node000003" href="$class_tool_bar.html#aaa8b447100940f1c37e35e5afedc43ba" title="Slot aktualizujący arkusz stylów (StyleSheet) paska i jego podelementów po zmianie motywu." alt="" coords="390,5,545,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="280,104,320,73,371,42,390,36,385,39,373,46,323,77,283,108"/>
+<area shape="rect" id="Node000004" href="$class_tool_bar.html#aaacafa290cc4c22e517689476964b249" title="Funkcja tworzy i konfiguruje menu wyboru języka aplikacji." alt="" coords="383,56,552,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="321,103,399,86,394,88,323,109"/>
+<area shape="rect" id="Node000005" href="$class_tool_bar.html#aba1224c30a3ad6c35fc2e62018b7c73c" title="Sygnał emitowany po kliknięciu przycisku nawigacji (&quot;DANE&quot; / &quot;SYMULATOR&quot;)." alt="" coords="376,107,559,133"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="324,117,363,119,358,121,325,123"/>
+<area shape="rect" id="Node000006" href="$class_tool_bar.html#aba5f76acc2699e6d081c1d623c80528c" title="Zmienia wewnętrzny stan statycznej flagi motywu na przeciwny." alt="" coords="402,157,533,184"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="322,131,399,153,394,153,322,137"/>
+<area shape="rect" id="Node000007" href="$class_tool_bar.html#aed80d55192f1061049db234ee3086ed8" title="Sygnał emitowany po kliknięciu przycisku zmiany motywu graficznego (&quot;MOTYW&quot;)." alt="" coords="372,208,563,235"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="283,131,323,163,373,194,390,203,385,202,371,198,320,167,281,136"/>
+</map>

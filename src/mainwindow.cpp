@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 
-MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), _controller(new ControllerManager(this))
+MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), _controller(new ControllerManager(this)), _flightModel(new FlightMathModel())
 {
     setWindowTitle(tr("Symulator Wirtualnego Kokpitu"));
 
@@ -18,6 +18,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), _controller(new C
     this->move(x, y);
 
     createLayout();
+    connect(_controller, &ControllerManager::dataReceived, _flightModel, &FlightMathModel::dataReceived);
     _controller->start();
 }
 
@@ -34,11 +35,12 @@ void MainWindow::createLayout()
     stackedWidget->setCurrentIndex(0);
 
     connect(_controller, &ControllerManager::connectionStatus, mainPage, &MainPage::connectionStatus);
-    connect(_controller, &ControllerManager::dataReceived, mainPage, &MainPage::updateSimData);
     connect(_controller, &ControllerManager::connectionStatus, dataPage, &DataPage::connectionStatus);
-    connect(_controller, &ControllerManager::dataReceived, dataPage, &DataPage::updateSimData);
+    connect(_flightModel, &FlightMathModel::updateSimData, mainPage, &MainPage::updateSimData);
+    connect(_flightModel, &FlightMathModel::updateSimData, dataPage, &DataPage::updateSimData);
     connect(mainPage, &MainPage::changeThemeRequested, dataPage, &DataPage::changeTheme);
     connect(dataPage, &DataPage::changeThemeRequested, mainPage, &MainPage::changeTheme);
+    connect(mainPage, &MainPage::simulationStatus, _flightModel, &FlightMathModel::simulationStatus);
 
 
     connect(mainPage, &MainPage::changePageRequested, this, [=]() {

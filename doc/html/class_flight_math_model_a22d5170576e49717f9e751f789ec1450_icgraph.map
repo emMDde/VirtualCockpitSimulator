@@ -1,0 +1,7 @@
+<map id="FlightMathModel::simulationStatus" name="FlightMathModel::simulationStatus">
+<area shape="rect" id="Node000001" title="Aktywuje lub wstrzymuje wewnętrzne timery i obliczenia modelu matematycznego." alt="" coords="460,5,644,48"/>
+<area shape="rect" id="Node000002" href="$class_main_window.html#a1f9461bcb5778d6f3e578d2f7f5e91f8" title="Funkcja deklarująca główne składowe okna głównego Odpowiada ułożenie elementów, utworzenie górnego i ..." alt="" coords="233,13,412,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="442,27,413,29,412,24,447,27"/>
+<area shape="rect" id="Node000003" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="Konstruktor klasy MainWindow. Pobiera geometrię ekranu, konfiguruje początkowy rozmiar okna,..." alt="" coords="5,13,185,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="215,27,185,29,185,24,220,26"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="ToolBar" name="ToolBar">
+<area shape="rect" id="Node000001" title="Pasek narzędziowy / panel nawigacyjny aplikacji." alt="" coords="62,80,128,107"/>
+<area shape="rect" id="Node000003" href="$class_bottom_bar.html" title="Dolny pasek nawigacyjny aplikacji, dla zakładki wizualizacji danych." alt="" coords="5,155,89,181"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="81,119,57,156,53,153,76,121"/>
+<area shape="rect" id="Node000004" href="$class_top_bar.html" title="Górny pasek nawigacyjny aplikacji." alt="" coords="113,155,176,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="114,117,139,154,133,154,111,122"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="61,5,129,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,45,98,80,92,79,94,50"/>
+</map>

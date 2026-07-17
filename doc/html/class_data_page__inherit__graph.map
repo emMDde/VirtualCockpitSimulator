@@ -1,0 +1,5 @@
+<map id="DataPage" name="DataPage">
+<area shape="rect" id="Node000001" title="Klasa reprezentująca dedykowany widok/stronę z prezentującą dane lotu." alt="" coords="5,80,85,107"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="9,5,81,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="47,46,48,80,42,79,43,50"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="SimulatorArea::drawBackground" name="SimulatorArea::drawBackground">
+<area shape="rect" id="Node000001" title="Rysuje statyczne i dynamiczne elementy tła, takie jak gradientowe niebo i ziemię." alt="" coords="227,5,435,32"/>
+<area shape="rect" id="Node000002" href="$class_simulator_area.html#a53340485246537e4f5c206f6194fcf70" title="Główna metoda rysująca cały kadr symulacji (tło, chmury, samolot i śmigło)." alt="" coords="5,5,179,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="208,19,179,21,179,16,214,19"/>
+</map>

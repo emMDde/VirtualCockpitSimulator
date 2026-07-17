@@ -1,0 +1,5 @@
+<map id="EntryOverlay::changeEvent" name="EntryOverlay::changeEvent">
+<area shape="rect" id="Node000001" title="Reaguje na zmiany systemowe, nadpisano funkcjonalność zmiany języka aplikacji (LanguageChange)." alt="" coords="5,5,187,32"/>
+<area shape="rect" id="Node000002" href="$class_entry_overlay.html#a13993fb6787c3c07a90fa0049628db54" title="Odświeża teksty etykiet i przycisków przy użyciu aktualnego translatora Qt." alt="" coords="235,5,405,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,16,222,19,216,19,187,21"/>
+</map>

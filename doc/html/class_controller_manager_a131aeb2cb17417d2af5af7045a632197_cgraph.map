@@ -1,0 +1,22 @@
+<map id="ControllerManager::ControllerManager" name="ControllerManager::ControllerManager">
+<area shape="rect" id="Node000001" title="Konstruktor klasy ControllerManager." alt="" coords="5,64,141,107"/>
+<area shape="rect" id="Node000002" href="$class_controller_manager.html#ad33d47f11294baa22cf4a54ae4331ebc" title="Slot reagujący na błędy sprzętowe i systemowe portu szeregowego. Wywoływany m.in. w momencie nagłego ..." alt="" coords="372,56,507,99"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,81,357,77,355,82,141,87"/>
+<area shape="rect" id="Node000007" href="$class_controller_manager.html#a1105a5177d1228d636b1018e2cb3baff" title="Slot pełniący funkcję programowego watchdoga. Reaguje w sytuacji, gdy port jest otwarty,..." alt="" coords="189,5,324,48"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="140,61,176,51,172,54,142,66"/>
+<area shape="rect" id="Node000008" href="$class_controller_manager.html#a9e557b5b14d42d16d2f159ab1e8026b5" title="Slot wywoływany cyklicznie przez timer rekon koneksji. Podejmuje próby ponownego odnalezienia i otwar..." alt="" coords="189,123,324,165"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="141,104,177,117,172,118,141,110"/>
+<area shape="rect" id="Node000003" href="$class_controller_manager.html#aa42d7cddc514e9b9450fd19d7ae3ce06" title="Sygnał informujący o zmianie statusu połączenia z fizycznym kontrolerem." alt="" coords="555,56,691,99"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="507,75,543,77,537,78,508,80"/>
+<area shape="rect" id="Node000004" href="$class_controller_manager.html#a0dfa8127a78b4728001aba1f0f6d476c" title="Slot obsługujący zdarzenie gotowości danych w porcie szeregowym (readyRead). Pobiera bajty do wewnętr..." alt="" coords="555,123,691,165"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="500,97,551,117,545,117,500,102"/>
+<area shape="rect" id="Node000005" href="$class_controller_manager.html#a51a67f7b7ff8caca331e9d4d55bcb2b7" title="Weryfikuje integralność danych poprzez porównanie obliczonej sumy kontrolnej z wartością zapisaną w p..." alt="" coords="739,89,874,132"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="691,129,721,126,726,125,691,134"/>
+<area shape="rect" id="Node000006" href="$class_controller_manager.html#adb204731f6048da2aeb57e75d73401f6" title="Sygnał emitowany po odebraniu, sparsowaniu i pomyślnej weryfikacji sumy CRC pakietu danych." alt="" coords="739,156,874,199"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="691,154,726,162,721,162,691,159"/>
+<area shape="poly" id="edge7_Node000007_Node000002" title=" " alt="" coords="324,43,360,54,354,55,325,48"/>
+<area shape="rect" id="Node000009" href="$class_controller_manager.html#a3259e7f30e3ccf6994107842e252f7ca" title="Iteruje po wszystkich dostępnych portach szeregowych w celu identyfikacji i otwarcia portu kontrolera..." alt="" coords="372,123,507,165"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="324,141,359,144,354,144,325,147"/>
+<area shape="poly" id="edge10_Node000009_Node000003" title=" " alt="" coords="499,120,545,105,551,104,501,125"/>
+<area shape="poly" id="edge11_Node000009_Node000004" title=" " alt="" coords="508,141,543,144,537,144,508,147"/>
+</map>

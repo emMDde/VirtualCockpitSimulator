@@ -1,0 +1,5 @@
+<map id="SimulatorArea::simulationStatus" name="SimulatorArea::simulationStatus">
+<area shape="rect" id="Node000001" title="Kontroluje stan działania animacji i timera odświeżania ekranu." alt="" coords="199,5,369,48"/>
+<area shape="rect" id="Node000002" href="$class_main_page.html#a80f43b72185f7ca021d81c2c6e9173a8" title="Konstruktor klasy MainPage. Inicjalizuje wszystkie widgety potomne, ustala ich układ (Layout) i łączy..." alt="" coords="5,13,151,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,27,151,29,151,24,186,26"/>
+</map>

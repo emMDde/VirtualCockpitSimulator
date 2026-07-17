@@ -1,0 +1,9 @@
+<map id="ControllerManager::searchForController" name="ControllerManager::searchForController">
+<area shape="rect" id="Node000001" title="Iteruje po wszystkich dostępnych portach szeregowych w celu identyfikacji i otwarcia portu kontrolera..." alt="" coords="372,39,507,81"/>
+<area shape="rect" id="Node000002" href="$class_controller_manager.html#a1632a6401ae283521f837985bf893903" title="Inicjuje menedżer i uruchamia procedurę wyszukiwania oraz połączenia z kontrolerem." alt="" coords="189,5,324,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="354,45,324,42,324,36,359,45"/>
+<area shape="rect" id="Node000003" href="$class_controller_manager.html#a9e557b5b14d42d16d2f159ab1e8026b5" title="Slot wywoływany cyklicznie przez timer rekon koneksji. Podejmuje próby ponownego odnalezienia i otwar..." alt="" coords="189,72,324,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="359,75,325,84,324,78,354,75"/>
+<area shape="rect" id="Node000004" href="$class_controller_manager.html#a131aeb2cb17417d2af5af7045a632197" title="Konstruktor klasy ControllerManager." alt="" coords="5,72,141,115"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="170,94,141,96,141,91,176,93"/>
+</map>

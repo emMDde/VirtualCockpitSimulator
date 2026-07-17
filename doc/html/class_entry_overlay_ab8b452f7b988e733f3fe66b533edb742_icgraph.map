@@ -1,0 +1,5 @@
+<map id="EntryOverlay::handleConnection" name="EntryOverlay::handleConnection">
+<area shape="rect" id="Node000001" title="Slot aktualizujący interfejs graficzny nakładki w zależności od stanu połączenia. Odpowiednio blokuje..." alt="" coords="199,5,408,32"/>
+<area shape="rect" id="Node000002" href="$class_main_page.html#a80f43b72185f7ca021d81c2c6e9173a8" title="Konstruktor klasy MainPage. Inicjalizuje wszystkie widgety potomne, ustala ich układ (Layout) i łączy..." alt="" coords="5,5,151,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,19,151,21,151,16,186,19"/>
+</map>

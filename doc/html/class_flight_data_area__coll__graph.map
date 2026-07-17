@@ -1,0 +1,9 @@
+<map id="FlightDataArea" name="FlightDataArea">
+<area shape="rect" id="Node000001" title="Obszar interfejsu odpowiedzialny za wizualizację parametrów lotu." alt="" coords="23,180,131,207"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,81,74,108"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="52,121,75,179,69,180,48,125"/>
+<area shape="rect" id="Node000003" href="$class_virtual_horizon.html" title="Widget wizualizujący sztuczny horyzont (wskaźnik położenia)." alt="" coords="97,81,200,108"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="133,120,88,182,84,178,128,121"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="113,5,185,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="150,45,151,82,146,80,148,49"/>
+</map>

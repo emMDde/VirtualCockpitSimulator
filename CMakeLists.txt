@@ -39,6 +39,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         bottombar.h bottombar.cpp
         flightdataarea.h flightdataarea.cpp
         toolbar.h toolbar.cpp
+        flightmathmodel.h flightmathmodel.cpp
+        entryoverlay.h entryoverlay.cpp
 
     )
 # Define target properties for Android with Qt 6 as:

@@ -1,24 +1,59 @@
 #include "simulatorarea.h"
-#include <QPainter>
-#include <cmath>
-#include <QDebug>
 
-SimulatorArea::SimulatorArea(QWidget *parent) : QFrame(parent), _scrollOffset(0.0f)
+#define FPS 50
+
+SimulatorArea::SimulatorArea(QWidget *parent) : QFrame(parent), _frameTimer(new QTimer(this)), _simTime(0.0f), _rotX(0), _rotY(0)
 {
     this->setStyleSheet("background-color: #87CEEB;");
     _treeImage.load(":/grafika/niebo.png");
     _planeImage.load(":/grafika/plane.png");
     _propellerImage.load(":/grafika/smigla.png");
     _animSpeed=5;
+
+    connect(_frameTimer, &QTimer::timeout, this, SimulatorArea::frameTimerTick);
+}
+
+void SimulatorArea::simulationStatus(bool status)
+{
+    if(status) _frameTimer->start(1000/FPS);
+    else _frameTimer->stop();
+}
+
+void SimulatorArea::frameTimerTick()
+{
+    _simTime = fmodf(_simTime + 1.5f, 46000.0f);
+    _propellerRot = fmod(_propellerRot + 40.0, 360.0);
+    this->update();
 }
 
 void SimulatorArea::setData(float rotX, float rotY)
 {
-    _rotX = 0;//rotX;
+    _rotX = rotX;
     _rotY = rotY;
+}
 
-    _scrollOffset += 1.5f;
-    if (_scrollOffset > 100000.0f) _scrollOffset = 0.0f;
+void SimulatorArea::changeTheme()
+{
+    if(ToolBar::getTheme())
+    {
+        _skyColorTop     = QColor(0x98D1F2);
+        _skyColorBottom  = QColor(0xB8D7EE);
+        _groundColor     = QColor(0x61b087);
+        _pathColor       = QColor(0x93999B);
+        _pathWalkColor   = QColor(0xCBCFCD);
+        _cloudColor      = Qt::white;
+        _lineColor       = Qt::white;
+    }
+    else
+    {
+        _skyColorTop     = QColor(0xBBE4FF);
+        _skyColorBottom  = QColor(0xE6F5FF);
+        _groundColor     = QColor(0x61b087);//QColor("#86D9A6");
+        _pathColor       = QColor(0xAAB3B8);
+        _pathWalkColor   = QColor(0xE8ECEF);
+        _cloudColor      = Qt::white;
+        _lineColor       = QColor(0xFFEA00);
+    }
 
     this->update();
 }
@@ -32,13 +67,13 @@ void SimulatorArea::drawBackground(QPainter &painter)
     QPointF vp(w / 2.0, horizonY);
 
     QLinearGradient skyGradient(0, 0, 0, h);
-    skyGradient.setColorAt(0.0, QColor(0x98D1F2));
-    skyGradient.setColorAt(0.5, QColor(0xB8D7EE));
+    skyGradient.setColorAt(0.0, _skyColorTop);
+    skyGradient.setColorAt(0.5, _skyColorBottom);
     painter.setBrush(skyGradient);
     painter.setPen(Qt::NoPen);
 
     painter.drawRect(0, 0, w, h);
-    painter.fillRect(0, horizonY, w, h, QColor(0x61b087)); //5B9E77
+    painter.fillRect(0, horizonY, w, h, _groundColor); //5B9E77
     painter.drawPixmap(0, 0, w, h, _treeImage);
 
     double topWidth = w * 0.025;
@@ -46,12 +81,12 @@ void SimulatorArea::drawBackground(QPainter &painter)
 
     QPolygonF path;
     path << QPointF(vp.x() - topWidth, horizonY) << QPointF(vp.x() + topWidth, horizonY) << QPointF(vp.x() + bottomWidth, h) << QPointF(vp.x() - bottomWidth, h);
-    painter.setBrush(QColor(0x93999B));
+    painter.setBrush(_pathColor);
     painter.drawPolygon(path);
 
     QPolygonF leftPathWalk;
     leftPathWalk << QPointF(vp.x() - topWidth, horizonY) << QPointF(vp.x() -topWidth + w*0.01, horizonY) << QPointF(vp.x() - bottomWidth + w*0.08, h) << QPointF(vp.x() - bottomWidth , h);
-    painter.setBrush(QColor(0xCBCFCD));
+    painter.setBrush(_pathWalkColor);
     painter.drawPolygon(leftPathWalk);
 
     QPolygonF rightPathWalk;
@@ -61,7 +96,7 @@ void SimulatorArea::drawBackground(QPainter &painter)
 
 void SimulatorArea::drawCloud(QPainter &painter, double x, double y, double cW, double cH)
 {
-    painter.setBrush(Qt::white);
+    painter.setBrush(_cloudColor);
     painter.setPen(Qt::NoPen);
     double cornerRadius = cH * 0.4;
 
@@ -83,9 +118,10 @@ void SimulatorArea::paintEvent(QPaintEvent *event)
     double horizonY = h * 0.585;
     QPointF vp(w / 2.0, horizonY);
 
+    // Animacja chmur
     for (int i = 0; i < 8; ++i)
     {
-        double animationPosition = _scrollOffset * _animSpeed + (i * 200);
+        double animationPosition = _simTime * 4 + (i * 200);
 
         double z = 1000.0 - fmod(animationPosition, 1000.0);
         if (z < 1.0) continue;
@@ -107,51 +143,108 @@ void SimulatorArea::paintEvent(QPaintEvent *event)
         drawCloud(painter, cloudX, cloudY, cloudW, cloudH);
     }
 
-    QPen dashPen(Qt::white, qMax(2, w / 150), Qt::DashLine);
-    dashPen.setDashPattern({5.0, 5.0});
-    dashPen.setDashOffset(-_scrollOffset * _animSpeed * 0.1);
-    painter.setPen(dashPen);
-    painter.drawLine(QPointF(vp.x(), horizonY), QPointF(vp.x(), h));
+    // Animacja pasów
+    double roadHeight = h - horizonY;
+
+    double zFar = 100.0;
+    double zNear = 8.0;
+    double fFar = 1.0 / zFar;
+    double fNear = 1.0 / zNear;
+    double fRange = fNear - fFar;
+    double zLineW = 6.0;
+
+    for (int i=0; i<7; ++i)
+    {
+        double zTop = zFar - fmod(_simTime * 1.0f + (i * 13.5), zFar - zNear);
+        double zBottom = zTop - zLineW;
+
+        if (zTop <= zNear) continue;
+
+        double coeffTop    = ((1.0 / zTop) - fFar) / fRange;
+        double coeffBottom = ((1.0 / zBottom) - fFar) / fRange;
+
+        double yTop    = horizonY + roadHeight * coeffTop;
+        double yBottom = horizonY + roadHeight * coeffBottom;
+
+        double maxWidth = w * 0.018;
+        double wTop    = maxWidth * ((1.0 / zTop) / fNear);
+        double wBottom = maxWidth * ((1.0 / zBottom) / fNear);
+
+        if (yBottom > yTop && yTop >= horizonY)
+        {
+            QPolygonF stripe;
+            stripe << QPointF(vp.x() - wTop, yTop) << QPointF(vp.x() + wTop, yTop) << QPointF(vp.x() + wBottom, yBottom) << QPointF(vp.x() - wBottom, yBottom);
+
+            painter.setBrush(_lineColor);
+            painter.setPen(Qt::NoPen);
+            painter.drawPolygon(stripe);
+        }
+    }
 
     painter.save();
-    double pitchOffset = _rotY * (h * 0.015);
+    double pitchOffset = _rotX * (h * 0.015);
     double planeY = qBound(h * 0.1, (h * 0.5) - pitchOffset, h * 0.9);
 
     painter.translate(w / 2.0, planeY);
-    painter.rotate(_rotX);
+    painter.rotate(_rotY);
 
     double targetWidth = qMin(w, h) * 0.8;
     double aspect = static_cast<double>(_planeImage.height()) / _planeImage.width();
     double targetHeight = targetWidth * aspect;
+    double hw = targetWidth / 2.0;
+    double hh = targetHeight / 2.0;
 
+    // Tworzenie pochylenia - perspektywy dla samolotu
+    QPolygonF sourcePoly;
+    sourcePoly << QPointF(0, 0) << QPointF(_planeImage.width(), 0) << QPointF(_planeImage.width(), _planeImage.height()) << QPointF(0, _planeImage.height());
 
+    double maxVisualPitch = 25.0;
+    double pitchFactor = qBound(-1.0, _rotX / maxVisualPitch, 1.0);
 
-    _propellerRot = fmod(_propellerRot + 30.0, 360.0);
+    double topW  = hw * (1.0 - qAbs(pitchFactor) * 0.1);
+    double bottomW = hw * (1.0 + qAbs(pitchFactor) * 0.1);
+    double perspectiveH = hh * (1.0 + pitchFactor * 0.25);
 
+    QPolygonF targetPoly;
+    if (pitchFactor >= 0)
+    {
+        targetPoly << QPointF(-topW, -perspectiveH) << QPointF(topW, -perspectiveH)
+                   << QPointF(bottomW, perspectiveH) << QPointF(-bottomW, perspectiveH);
+    }
+    else
+    {
+        targetPoly << QPointF(-bottomW, -perspectiveH) << QPointF(bottomW, -perspectiveH)
+                   << QPointF(topW, perspectiveH) << QPointF(-topW, perspectiveH);
+    }
+
+    QTransform perspectiveTransform;
+    if (QTransform::quadToQuad(sourcePoly, targetPoly, perspectiveTransform)) painter.setTransform(perspectiveTransform, true);
+
+    // Animacja śmigła samolotu
+    painter.save();
     double pivotX = _propellerImage.width() / 2.03;
     double pivotY = _propellerImage.height() * 0.426;
-
-    painter.save();
     painter.translate(pivotX, pivotY);
     painter.rotate(_propellerRot);
-
     painter.translate(-pivotX, -pivotY);
 
     painter.drawPixmap(0, 0, _propellerImage);
     painter.rotate(-_propellerRot);
     painter.restore();
+
+    // Rysowanie samolotu
     painter.drawPixmap(0, 0, _planeImage);
     painter.restore();
 }
 
-void SimulatorArea::changeTheme()
-{
+// Zwykłe pasy
+// QPen dashPen(_lineColor, qMax(2, w / 150), Qt::DashLine);
+// dashPen.setDashPattern({5.0, 5.0});
+// dashPen.setDashOffset(_animSpeed * (-10));
+// painter.setPen(dashPen);
+// painter.drawLine(QPointF(vp.x(), horizonY), QPointF(vp.x(), h));
 
-}
-
-// ==========================================
-// 5. ZAPĘTLONY LAS W PERSPEKTYWIE
-// ==========================================
+// Las w perspektywie
 // Rysujemy od tyłu (z=100) do przodu (z=1), żeby bliższe drzewa zasłaniały dalsze
 // for (int i = 12; i > 0; --i) {
 //     double z = 100.0 - fmod(_scrollOffset * 15.0 + (i * 8.5), 100.0);

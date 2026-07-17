@@ -1,0 +1,7 @@
+<map id="ToolBar::ToolBar" name="ToolBar::ToolBar">
+<area shape="rect" id="Node000001" title="Konstruktor klasy ToolBar. Inicjalizuje układ paska, tworzy przyciski nawigacyjne,..." alt="" coords="207,31,324,57"/>
+<area shape="rect" id="Node000002" href="$class_bottom_bar.html#a4c0054b8dec369b161bd5f2437bfa7aa" title="Konstruktor klasy BottomBar. Przekazuje parametry konfiguracyjne bezpośrednio do konstruktora klasy b..." alt="" coords="5,5,159,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,34,159,32,159,27,194,33"/>
+<area shape="rect" id="Node000003" href="$class_top_bar.html#a2415e69c680f9f758cc52ea30510b879" title="Konstruktor klasy TopBar. Przekazuje parametry konfiguracyjne bezpośrednio do konstruktora klasy bazo..." alt="" coords="26,56,138,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="189,55,138,64,138,59,194,54"/>
+</map>

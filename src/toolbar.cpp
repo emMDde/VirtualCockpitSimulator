@@ -19,7 +19,6 @@ ToolBar::ToolBar(QWidget *parent, int height, int width, const char* pageText, B
     _statusLed = new QLabel(this);
     _ledRadius = height/4;
     _statusLed->setFixedSize(height/2, height/2);
-    setConnectionStatus(false);
 }
 
 QMenu *ToolBar::createLangMenu()

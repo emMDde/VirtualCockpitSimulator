@@ -1,0 +1,11 @@
+<map id="EntryOverlay::reTranslate" name="EntryOverlay::reTranslate">
+<area shape="rect" id="Node000001" title="Odświeża teksty etykiet i przycisków przy użyciu aktualnego translatora Qt." alt="" coords="456,56,626,83"/>
+<area shape="rect" id="Node000002" href="$class_entry_overlay.html#adc9777c0e93a2dc81fc55b618252adbd" title="Reaguje na zmiany systemowe, nadpisano funkcjonalność zmiany języka aplikacji (LanguageChange)." alt="" coords="213,5,394,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="458,52,369,35,369,30,463,52"/>
+<area shape="rect" id="Node000003" href="$class_entry_overlay.html#ab283ab41849d314aa30fbb1f379a85be" title="Konstruktor klasy EntryOverlay." alt="" coords="213,56,394,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="438,70,394,72,394,67,443,69"/>
+<area shape="rect" id="Node000004" href="$class_entry_overlay.html#ab8b452f7b988e733f3fe66b533edb742" title="Slot aktualizujący interfejs graficzny nakładki w zależności od stanu połączenia. Odpowiednio blokuje..." alt="" coords="199,107,408,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="463,86,370,109,369,103,458,87"/>
+<area shape="rect" id="Node000005" href="$class_main_page.html#a80f43b72185f7ca021d81c2c6e9173a8" title="Konstruktor klasy MainPage. Inicjalizuje wszystkie widgety potomne, ustala ich układ (Layout) i łączy..." alt="" coords="5,107,151,133"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="181,120,151,123,151,117,186,120"/>
+</map>

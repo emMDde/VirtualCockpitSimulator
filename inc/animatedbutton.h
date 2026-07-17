@@ -10,9 +10,9 @@
  * @enum ButtonTheme
  * @brief Definiuje dostępne motywy kolorystyczne przycisku.
  */
-enum ButtonTheme{
-    orange,
-    grey
+enum ButtonTheme {
+    orange, /**< Motyw pomarańczowy. */
+    grey    /**< Motyw szary. */
 };
 
 
@@ -36,7 +36,7 @@ public:
      * @param[in] style --  Wybrany motyw kolorystyczny (ButtonTheme).
      * @param[in] text -- Tekst wyświetlany na przycisku (klucz do tłumaczeń).
      * @param[in] isAnimated -- Jeśli true - przycisk posiada animowane kółko.
-     * @param[in] parent -- Wskaźnik na widget nadrzędny.
+     * @param[in, out] parent -- Wskaźnik na widget nadrzędny.
      */
     explicit AnimatedButton(int height, int width, ButtonTheme style, const QString &text, bool isAnimated=true, QWidget *parent = nullptr);
 
@@ -75,18 +75,18 @@ private:
 
     /**
      * @brief Konfiguruje paletę kolorów na podstawie wybranego motywu.
-     * @param theme Referencja do wybranego motywu.
+     * @param[in] theme -- Referencja do wybranego motywu kolorystycznego.
      */
-    void setupColors(ButtonTheme &theme);
+    void setupColors(const ButtonTheme &theme);
 
     /**
      * @brief Inicjalizuje obiekt kółka oraz konfiguruje parametry animacji.
-     * @param height Wysokość w pikselach używana do obliczenia promienia i rozmiaru kółka.
+     * @param[in] height -- Wysokość w pikselach używana do obliczenia rozmiarów kółka.
      */
     void setupAnimation(int height);
 
     /**
-     * @brief Odświeża tekst przycisku przy użyciu aktualnego translatora.
+     * @brief Odświeża tekst przycisku przy użyciu aktualnego translatora systemu Qt.
      */
     void reTranslate();
 

@@ -15,6 +15,7 @@
 #include <QPropertyAnimation>
 #include <QActionGroup>
 #include "toolbar.h"
+
 /**
  * @class TopBar
  * @brief Górny pasek nawigacyjny aplikacji.
@@ -28,12 +29,14 @@ class TopBar : public ToolBar
     Q_OBJECT
 
 public:
+
     /**
      * @brief Konstruktor klasy TopBar.
-     * * Inicjalizuje układ, przyciski i diodę LED oraz ustala ich rozmiary.
-     * @param parent Wskaźnik na widget nadrzędny (domyślnie nullptr).
-     * @param height Wysokość paska w pikselach.
-     * @param width Szerokość paska w pikselach.
+     * Przekazuje parametry konfiguracyjne bezpośrednio do konstruktora klasy bazowej ToolBar,
+     * inicjalizuje dedykowany układ dolnego panelu oraz przypisuje klucz tekstowy dla przycisku powrotu.
+     * @param[in, out] parent -- Wskaźnik na widget nadrzędny (domyślnie nullptr).
+     * @param[in] height -- Wysokość paska wyrażona w pikselach (domyślnie 60).
+     * @param[in] width -- Szerokość paska wyrażona w pikselach (domyślnie 1280).
      */
     explicit TopBar(QWidget *parent = nullptr, int height = 60, int width = 1280);
 

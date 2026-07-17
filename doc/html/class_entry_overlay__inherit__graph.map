@@ -1,0 +1,5 @@
+<map id="EntryOverlay" name="EntryOverlay">
+<area shape="rect" id="Node000001" title="Klasa reprezentująca nakładkę startową oraz ekran utraty połączenia z kontrolerem." alt="" coords="5,80,103,107"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="20,5,88,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="56,46,57,80,51,79,52,50"/>
+</map>

@@ -1,6 +1,6 @@
 #include "flightdataarea.h"
 
-FlightDataArea::FlightDataArea(int height, int width, QWidget *parent) : QFrame(parent), _maxDataPoints(400), _isPaused(false)
+FlightDataArea::FlightDataArea(int height, int width, QWidget *parent) : QFrame(parent), _maxDataPoints(800), _isPaused(false)
 {
     _layoutContainer = new QFrame(this);
     //_layoutContainer->setStyleSheet("background: transparent; border: none;");
@@ -194,8 +194,8 @@ void FlightDataArea::paintEvent(QPaintEvent *event)
     painter.fillRect(rollRect, _graphBgColor);
     painter.fillRect(pitchRect, _graphBgColor);
 
-    drawGraph(painter, rollRect, _rollHistory, QColor(0x3A9BDC), 180.0f, "+180", "-180");
-    drawGraph(painter, pitchRect, _pitchHistory, QColor(0xD94040), 90.0f, "+90", "-90");
+    drawGraph(painter, rollRect, _rollHistory, QColor(0x3A9BDC), 90.0f, "+90", "-90");
+    drawGraph(painter, pitchRect, _pitchHistory, QColor(0xD94040), 180.0f, "+180", "-180");
 }
 
 void FlightDataArea::drawCloud(QPainter &painter, int x, int y, int cW, int cH)
@@ -235,7 +235,8 @@ void FlightDataArea::drawGraph(QPainter &painter, const QRect& rect, const QList
     painter.drawText(rect.x(), zeroY - 10, padL - 5, 20, Qt::AlignRight | Qt::AlignVCenter, "0");
     painter.drawText(rect.x(), plotY + plotH - 20, padL - 5, 20, Qt::AlignRight | Qt::AlignBottom, botTxt);
 
-    if (data.size() > 1) {
+    if (data.size() > 1)
+    {
         painter.setPen(QPen(color, 3));
         float stepX = (float)plotW / (_maxDataPoints - 1);
 

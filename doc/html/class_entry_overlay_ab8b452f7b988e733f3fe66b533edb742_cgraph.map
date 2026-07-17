@@ -1,0 +1,7 @@
+<map id="EntryOverlay::handleConnection" name="EntryOverlay::handleConnection">
+<area shape="rect" id="Node000001" title="Slot aktualizujący interfejs graficzny nakładki w zależności od stanu połączenia. Odpowiednio blokuje..." alt="" coords="5,35,215,61"/>
+<area shape="rect" id="Node000002" href="$class_entry_overlay.html#a13993fb6787c3c07a90fa0049628db54" title="Odświeża teksty etykiet i przycisków przy użyciu aktualnego translatora Qt." alt="" coords="263,5,433,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,32,250,30,245,32,216,38"/>
+<area shape="rect" id="Node000003" href="$class_entry_overlay.html#a72a704431ea2e7c79ea7d0629bdf02e3" title="Sygnał informujący o żądaniu zmiany stanu działania symulacji." alt="" coords="266,56,430,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="215,58,253,65,247,65,215,64"/>
+</map>

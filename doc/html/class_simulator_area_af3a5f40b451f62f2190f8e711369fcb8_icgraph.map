@@ -1,0 +1,5 @@
+<map id="SimulatorArea::frameTimerTick" name="SimulatorArea::frameTimerTick">
+<area shape="rect" id="Node000001" title="Slot wywoływany cyklicznie przez timer, odpowiedzialny za wymuszenie przerysowania klatki (update())." alt="" coords="247,5,449,32"/>
+<area shape="rect" id="Node000002" href="$class_simulator_area.html#aae0edfd57f5e821295add051b4d1976e" title="Konstruktor klasy SimulatorArea. Inicjalizuje domyślne parametry środowiska, ładuje zasoby graficzne ..." alt="" coords="5,5,199,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="228,19,199,21,199,16,234,19"/>
+</map>

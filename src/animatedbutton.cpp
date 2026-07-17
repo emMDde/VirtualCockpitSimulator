@@ -51,7 +51,7 @@ void AnimatedButton::setupAnimation(int height)
 
 void AnimatedButton::enterEvent(QEnterEvent *event)
 {
-    if(_isAnimated)
+    if(_isAnimated && this->isEnabled())
     {
         _animation->stop();
         _animation->setEndValue(QPoint(this->width() - _circle->width(), 0));
@@ -62,7 +62,7 @@ void AnimatedButton::enterEvent(QEnterEvent *event)
 
 void AnimatedButton::leaveEvent(QEvent *event)
 {
-    if(_isAnimated)
+    if(_isAnimated && this->isEnabled())
     {
         _animation->stop();
         _animation->setEndValue(QPoint(0, 0));
@@ -83,7 +83,7 @@ void AnimatedButton::reTranslate()
     //qDebug() << " Wywołano retranslate dla przycisku!" << _text.toUtf8().constData();
 }
 
-void AnimatedButton::setupColors(ButtonTheme &theme)
+void AnimatedButton::setupColors(const ButtonTheme &theme)
 {
     if(theme==orange)
     {

@@ -18,10 +18,10 @@ void VirtualHorizon::paintEvent(QPaintEvent *event)
     double size = R * 3.0;
 
     painter.translate(w / 2.0, h / 2.0);
-    painter.rotate(_rotX);
+    painter.rotate(_rotY);
 
     double pixelsPerDegree = R / 45.0;
-    double yOffset = _rotY * pixelsPerDegree;
+    double yOffset = _rotX * pixelsPerDegree;
 
     painter.translate(0, yOffset);
 
